@@ -247,6 +247,14 @@
 |gd.jpeg_ignore_warning||pef 解码失败忽略警告||
 |tidy.default_config||tidy默认的配置文件||
 |tidy.clean_output|| 是否tidy应该自动清理和修复输出||
+|soap.wsdl_cache_enabled||启用或者关闭soap缓存||
+|soap.wsdl_cache_dir||soap 缓存的缓存文件||
+|soap.wsdl_cache_ttl||24小时内都缓存到/tmp目录下||
+|soap.wsdl_cache_limit||wsdl缓存文件数目||
+|sysvshm.init_mem||默认的共享内存段大小，套是System V IPC函数的封装，另一套是shmop，这两个都无需安装外部库文件||
+|ldap.max_links||每进程允许的最大LDAP连接数||
+|mcrypt.algorithms_dir||crypt常用在对称加密中，openssl常用在非对称加密中||
+|mcrypt.modes_dir||algorithm_directory 参数指示加密模式的位置||
 
 其它：
 #### date_default_timezone_get 获取的时间的顺序
