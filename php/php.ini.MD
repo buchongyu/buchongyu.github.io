@@ -149,9 +149,4 @@
 |user_dir|空值|[在 web 服务器的主文档目录中包含动态内容如脚本和可执行程序有时被认为是一种不安全的实践](http://www.php.net/manual/zh/security.cgi-bin.doc-root.php)||
 |enable_dl|Off||允许php运行时加载动态链接库|
 |cgi.nph|1|强制cgi在每个请求时发送status:200||
-|cgi.redirect_status_env||如果cgi.force_redirect被打开,并且你没有在Apache或者Netscape(iPlanet) web服务器下运行,你也许需要设置一个环境变量名让PHP来查找让其可以获取后继续执行. 设置此变量可能引起安全问题, 在设置之前请先了解可能引起的后果||
-|cgi.fix_pathinfo|1||PHP CGI 以 / 为分隔符号从后向前依次检查SCRIPT_FILENAME路径|
-|fastcgi.impersonate|0||windows iis选项|
-|fastcgi.logging|0||FastCGI 日志在 IIS 下应被关闭。如果激活，则任何类的任何消息都被FastCGI 视为错误条件从而导致 IIS 产生 HTTP 500 错误。|
-|cgi.rfc2616_headers|0||指定 PHP 在发送 HTTP 响应代码时使用何种报头。如果设定为 0，PHP 发送一个 Status: 报头，Apache 和其它 web server 都支持。如果此选项设定为 1，PHP 将发送 RFC 2616 兼容的报头。除非你知道自己在做什么，否则保留其值为 0|
-|file_uploads|On||开启文件上传|
+
