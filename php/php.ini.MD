@@ -131,5 +131,27 @@
 |error_append_string|空值|错误信息后缀的字符串||
 |error_log|空值|错误日志指定的文件，syslog表示系统的错误日志|如果该文件没指定或者没权限写入，则输出到标准输出|
 |arg_separator.output|&|使用php生成的url自读串,http_build_query函数||
-|arg_separator.input|&|php解析输入的url，默认的变量分割符号. 影响$_GET的变量||
-
+|arg_separator.input|&|php解析输入的url，默认的变量分割符号. 影响GET的变量||
+|variables_order|EGPCS| 注册哪些超全局的变量. GET POST COOKIE SERVER|register_globals=on的情况，这个配置的顺序将影响对应变量的值，重复key，后边的会覆盖前边的|
+|request_order|None||如果这只为GET和POST,REUEST数组有哪些数组组成,该变量就是GET和POST|
+|register_argc_argv|Off|命令行下传递给脚本的变量. $argc和$argv||
+|auto_globals_jit|On|ENV SERVER REQUEST只会在第一次用的时候创建,性能优化使用||
+|enable_post_data_reading|On| 禁止这个选项将会使 $_POST 和 $_FILES 不会被填充，唯一能够访问post数据的方法是通过 php://input 流包装器。这在代理请求或者是在内存中更高效处理post数据的时候是非常有用的。||
+|post_max_size|100M|post方式推送的最大数据长度,upload_max_filesize应该小于这个值,这个值应该小于memory_limit.||
+|auto_prepend_file|空值||在执行php文件之前执行的文件|
+|auto_append_file|空值||在执行php文件之后执行的文件|
+|default_mimetype|"text/html"||MIME类型提供了一个标准的方法在互联网上的文件类型进行分类, 文件类型分类|
+|default_charset|"UTF-8"||默认的字符集|
+|always_populate_raw_post_data|On|[给变量HTTP_RAW_POST_DATA填充post的数据](http://www.tuicool.com/articles/ZnuIzq)|php://input带来的内存压力小，不能用于enctype="multipart/form-data"的数据，php默认只识别：application/x-www.form-urlencoded，text/xml类型的POST无法获取，可以通过HTTP_RAW_POST_DATA来获取|
+|include_path|".;/path/to/php/pear"|影响include,require,include_once,require_once的加载的路径||
+|cgi.force_redirect|空值|开启以CGI方式执行PHP有用|和环境变量PHP_DOCUMENT_ROOT一样,定义Php的主脚本目录,如果不在doc_root和user_dir的目录下，其它的目录不执行.|
+|doc_root|空值|[在 web 服务器的主文档目录中包含动态内容如脚本和可执行程序有时被认为是一种不安全的实践](http://www.php.net/manual/zh/security.cgi-bin.doc-root.php)|可以通过配置文件内的 doc_root 或设置环境变量 PHP_DOCUMENT_ROOT 来定义 PHP 脚本主目录。如果设置了该项，那么 PHP 就只会解释 doc_root 目录下的文件，并确保目录外的脚本不会被 PHP 解释器执行（下面所说的 user_dir 除外）。/~username 自动定位到家目录|
+|user_dir|空值|[在 web 服务器的主文档目录中包含动态内容如脚本和可执行程序有时被认为是一种不安全的实践](http://www.php.net/manual/zh/security.cgi-bin.doc-root.php)||
+|enable_dl|Off||允许php运行时加载动态链接库|
+|cgi.nph|1|强制cgi在每个请求时发送status:200||
+|cgi.redirect_status_env||如果cgi.force_redirect被打开,并且你没有在Apache或者Netscape(iPlanet) web服务器下运行,你也许需要设置一个环境变量名让PHP来查找让其可以获取后继续执行. 设置此变量可能引起安全问题, 在设置之前请先了解可能引起的后果||
+|cgi.fix_pathinfo|1||PHP CGI 以 / 为分隔符号从后向前依次检查SCRIPT_FILENAME路径|
+|fastcgi.impersonate|0||windows iis选项|
+|fastcgi.logging|0||FastCGI 日志在 IIS 下应被关闭。如果激活，则任何类的任何消息都被FastCGI 视为错误条件从而导致 IIS 产生 HTTP 500 错误。|
+|cgi.rfc2616_headers|0||指定 PHP 在发送 HTTP 响应代码时使用何种报头。如果设定为 0，PHP 发送一个 Status: 报头，Apache 和其它 web server 都支持。如果此选项设定为 1，PHP 将发送 RFC 2616 兼容的报头。除非你知道自己在做什么，否则保留其值为 0|
+|file_uploads|On||开启文件上传|
