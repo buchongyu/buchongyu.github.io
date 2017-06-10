@@ -97,9 +97,12 @@
 |serialize_precision|17|默认值能保证浮点型数据被解序列化程序解码时不会丢失数据|将浮点型和双精度型数据序列化存储时的精度(有效位数)。(注意：有效位数不会超过precision设置的值)|
 |disable_functions|空值||处于安全考虑,php禁止使用的函数，安全模式对该指令没影响|
 |disable_classes|空值||处于安全考虑,php禁止使用的类,安全模式对该指令没影响|
-|highlight.string|#DD0000||highlight_string函数高亮显示|
-|highlight.comment|#FF9900||highlight_string函数高亮显示|
-|highlight.keyword|#007700||highlight_string函数高亮显示|
-|highlight.default|#0000BB||highlight_string函数高亮显示|
-|highlight.html|#000000||highlight_string函数高亮显示|
-
+|highlight.string|#DD0000|highlight_string("Hello world! <?php phpinfo(); ?>");|highlight_string函数高亮显示|
+|highlight.comment|#FF9900|highlight_string("Hello world! <?php phpinfo(); ?>");|highlight_string函数高亮显示|
+|highlight.keyword|#007700|highlight_string("Hello world! <?php phpinfo(); ?>");|highlight_string函数高亮显示|
+|highlight.default|#0000BB|highlight_string("Hello world! <?php phpinfo(); ?>");|highlight_string函数高亮显示|
+|highlight.html|#000000|highlight_string("Hello world! <?php phpinfo(); ?>");|highlight_string函数高亮显示|
+|ignore_user_abort|On|默认断开后继续执行|与客户端断开是否终止脚本的执行,设置为 true，则忽略与用户的断开，如果设置为 false，会导致脚本停止运行|
+|realpath_cache_size|16k|把PHP所用到文件的realpath进行缓存，以便PHP再使用这些文件的时候不需要再去include_path中查找，加快PHP的执行速度。|决定 PHP 所使用的真实路径(非软连接)缓冲区的大小。此值在 PHP 会打开很多文件的系统下应增大，以反映出所执行文件操作的数量|
+|realpath_cache_ttl|120|php所使用的真是路径缓存的过期时间|由于realpath会 展开symlink(即软连接)，所以如果你使用修改symlink目标这种方式发布应用的新版本的话，realpath cache会导致一些问题的出现.当你修改symlink使其指向一个新的release目录时候，由于realpath cache所缓存内容还没有过期，于是就会出现应用使用的还是旧的release，直到realpath cache所缓存内容过期失效为止(默认120秒)，或者重启server。|
+|zend.enable_gc|On|[顽固内存泄露，垃圾回收器](http://www.cnblogs.com/dasn/archive/2010/11/01/1866139.html)|$a = array('one');$a[] = &$a;unset($a);内存泄露|
