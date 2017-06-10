@@ -6,13 +6,13 @@
 
 #### 本年度计划阅读的书籍：
   
-　1、乌合之众
+　1、[乌合之众](https://book.douban.com/subject/1012611/)
   
-　2、大而不倒
+　2、[大而不倒](https://book.douban.com/subject/5297291/)
 
-　3、社会工程
+　3、[社会工程](https://book.douban.com/subject/25768304/)
  
-　4、unix网络编程
+　4、[unix网络编程](https://book.douban.com/subject/1500149/)
  
 -------
 
@@ -64,7 +64,7 @@
 
 　1、php
  
-  2、php-ext
+　2、php-ext
   
   3、c or c plus plus
 
