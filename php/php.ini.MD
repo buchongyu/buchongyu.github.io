@@ -160,6 +160,39 @@
 |max_file_uploads|20|大上传的文件数量||
 |upload_tmp_dir|||文件上传的临时存放目录。如果没指定则PHP会使用系统默认的临时目录|
 |allow_url_fopen|On|以url的形式访问文件||
-|allow_url_include|Off|以
-|max_file_uploads|20|大上传的文件数量||URL
-|allow_url_include|Off|
+|allow_url_include|Off|以url的形式include文件||
+|from|empty|匿名ftp密码||
+|user_agent|PHP|php访问其它资源的默认user_agent||
+|default_socket_timeout|60|单位(秒)|default_socket_timeout是socket流的超时参数，即socket流从建立到传输再到关闭整个过程必须要在这个参数设置的时间以内完成，如果不能完成，那么PHP将自动结束这个socket并返回一个警告。类似的一个php配置是conn     ection_timeout，不过connection_timeout是指保持连接的时间超时，不包括创建和销毁连接|
+|auto_detect_line_endings|Off|果你在mac上处理unix或者win32上的文件,或者linux上处理mac的文集爱你，你需要php自动去检测文件的行结束符号.会有稍微的性能损失.|如:fgets和file函数|
+|extension|加载扩展|||
+|extension_dir|指定扩展的文件夹|||
+|cli_server.color|On|控制内置Web Server的终端输出有无颜色||
+|date.timezone|空值||php时间函数的默认时区|
+|date.default_latitude||默认维度||
+|date.default_longitude||默认经度||
+|date.sunrise_zenith||默认日出天顶||
+|date.sunset_zenith||默认日落天顶||
+|filter.default|unsafe_raw|获取所支持的过滤器的列表:filter_list|设置过滤器,过滤GET POST COOKIE REQUEST SERVER .原始数据可以通过filter_input()来访问的|
+|filter.default_flags||[设置过滤器的标志. 默认反馈](http://www.thinksaas.cn/manual/php/ref.filter.html)||
+|iconv.input_encoding||设置input编码|可以通过函数iconv_set_encoding来反应|
+|iconv.internal_encoding||设置内部编码|可以通过函数iconv_set_encoding来反应|
+|iconv.output_encoding||设置外部编码|可以通过函数iconv_set_encoding来反应|
+|intl.default_locale||默认的地区||
+|intl.error_level|E_WARNING||当有PHP错误在intl函数中发生时，允许你处理错误。值是错误产生的等级|
+|pcre.backtrack_limit|100000||php回溯限制|
+|pcre.recursion_limit|100000||php递归限制|
+|pdo_mysql.cache_size|2000||pdo_mysql索引块映射的缓存槽数量|
+|pdo_mysql.default_socket|空值|pdo_mysql默认的sockets||
+|phar.readonly|off|默认不能写phar|如果要写phar,需要设置为Off|
+|phar.require_hash|On|要求所有的phar archive都有对应的hash文件||
+|cache_list|空值|webserver启动的时候预加载的Phar包||
+
+其它：
+#### date_default_timezone_get 获取的时间的顺序
+&emsp;&emsp;1  data_default_timezone_set
+&emsp;&emsp;2、TZ环境变量
+&emsp;&emsp;3、data.timezone配置
+&emsp;&emsp;4、自动推测(如果操作系统支持)
+&emsp;&emsp;5、如果以上都不支持,则反回utc
+
