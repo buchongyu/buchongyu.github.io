@@ -33,7 +33,11 @@
 　7、[tengine](http://tengine.taobao.org/book/)
   
 　8、[nodejs.cn](http://nodejs.cn/api/)
-  
+ 
+　9、[python2.7-doc](https://docs.python.org/2.7/reference/introduction.html)
+
+　10、[redis-doc](https://redis.io/documentation)
+ 
 -------
  
 #### 常用的工具或者网站
