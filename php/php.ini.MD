@@ -1,4 +1,4 @@
-#### php.ini（php的初始化文件）:
+#### PHP.INI（php的初始化文件）:
 &emsp;&emsp;php的初始化文件(配置文件)，通常被叫做php.ini，它负责配置php行为的许多方面。对于服务器模块版本的php.ini，仅仅会在第一次启动的时候读取配置文件,cli和cgi的版本，每次调用都会读取。
 
 &emsp;&emsp;默认的情况下，php在下面的一系列位置寻找php.ini:
