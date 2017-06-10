@@ -155,3 +155,11 @@
 |fastcgi.logging|0||FastCGI 日志在 IIS 下应被关闭。如果激活，则任何类的任何消息都被FastCGI 视为错误条件从而导致 IIS 产生 HTTP 500 错误。|
 |cgi.rfc2616_headers|0||指定 PHP 在发送 HTTP 响应代码时使用何种报头。如果设定为 0，PHP 发送一个 Status: 报头，Apache 和其它 web server 都支持。如果此选项设定为 1，PHP 将发送 RFC 2616 兼容的报头。除非你知道自己在做什么，否则保留其值为 0|
 |file_uploads|On||开启文件上传|
+|max_file_uploads|20|大上传的文件数量||
+|upload_max_filesize|100M|文件上传后的最大尺寸||
+|max_file_uploads|20|大上传的文件数量||
+|upload_tmp_dir|||文件上传的临时存放目录。如果没指定则PHP会使用系统默认的临时目录|
+|allow_url_fopen|On|以url的形式访问文件||
+|allow_url_include|Off|以
+|max_file_uploads|20|大上传的文件数量||URL
+|allow_url_include|Off|
