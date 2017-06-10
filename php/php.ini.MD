@@ -114,11 +114,18 @@
 |max_input_nesting_level|60|单位，层|输入变量的最大嵌套层次|
 |memory_limit|1024M|脚本执行的最大内存限制|-1表示无限制|
 |error_reporting|E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE|开启错误提示的日志的等级|error_log($str,3,$filename)函数也可以指定这种步骤,|
-|display_errors|On|||
-|display_startup_errors||||
-|log_errors||||
-|log_errors_max_len||||
-|ignore_repeated_errors||||
-|ignore_repeated_source||||
-|report_memleaks||||
-|track_errors||||
+|display_errors|On||开启php的错误提示|
+|display_startup_errors|Off||即使display_errors开启了, php启动过程中的错误信息也不回显示。该选项是On,则显示php启动过程的错误，Off则不显示|
+|log_errors|On|是否将php脚本的错误信息记录到服务器的错误日志或者error_log中.默认apache的(php-error.log)|log_errors = On,如果error_log没指定或者没有权限写入,那么错误也会正常的输出。这样会使得display_errors=Off失败.|
+|log_errors_max_len|1024|单位:字节。0表示不限制长度|每个日志项的最大长度。|
+|ignore_repeated_errors|Off||是否忽略重复的错误信息.重复的错误必须出现在相同的文件中的相同的行.除非ignore_repeated_source=on|
+|ignore_repeated_source|Off||忽略重复消息时,也忽略消息的来源.也就是,不同不文件中(或者不同行)的重复错误也会被忽视掉.|
+|report_memleaks|On||是否会显示内存的泄露信息.|
+|track_errors|Off||如果开启了，最后一个错误将会保存在变量:php_errormsg中.|
+|xmlrpc_errors|0||关闭正常的错误线上，并讲错误的格式设置为xml-rpc形式的错误格式|
+|xmlrpc_error_number|0||用作 XML-RPC faultCode 元素的值|
+|html_errors|On|是否在出错信息中使用HTML标记.|如果打开了html_errors指令，PHP将会在出错信息上显示超连接,直接链接到一个说明这个错误或者导致这个错误的函数的页面.|
+|docref_root|"/phpmanual"||php文档的目录|
+|docref_ext|.html||超链接的后缀|
+|error_prepend_string|空值|错误信息前缀的字符串||
+|error_append_string|空值|错误信息后缀的字符串||
