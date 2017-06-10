@@ -250,9 +250,14 @@
 
 其它：
 #### date_default_timezone_get 获取的时间的顺序
+
 &emsp;&emsp;1  data_default_timezone_set
+
 &emsp;&emsp;2、TZ环境变量
+
 &emsp;&emsp;3、data.timezone配置
+
 &emsp;&emsp;4、自动推测(如果操作系统支持)
+
 &emsp;&emsp;5、如果以上都不支持,则反回utc
 
