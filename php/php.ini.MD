@@ -108,6 +108,8 @@
 |zend.enable_gc|On|[顽固内存泄露，垃圾回收器](http://www.cnblogs.com/dasn/archive/2010/11/01/1866139.html)|$a = array('one');$a[] = &$a;unset($a);refcount=1,会导致该zal得不到释放,会导致内存泄露，改选项就是为了防止zval由于循环引起的内存泄露|
 |zend.multibyte|空值|取值可以是Off,CP936,Big5,CP949和Shift_JIS等|多字节编码的支持|
 |zend.script_encoding|空值||指定php脚本的编码，php将优先使用declare(encoding=...)，如果没有declare，则使用zend.script_encoding|
-|expose_php||||
-|max_execution_time||||
-|max_input_time||||
+|expose_php|Off|是否暴露php,http头文件反馈:X-Powered-By:PHP/5.4.11||
+|max_execution_time|600|单位，秒|php脚本的最大执行时间，cli模式下默认是0（不限制）|
+|max_input_time|60|单位，秒|POST GET PUT 等方式接收数据的最大时间限制，cli模式下默认是-1（不限制）|
+|max_input_nesting_level|60|单位，词|输入变量的最大嵌套层次|
+|memory_limit|1024M|脚本执行的最大最大内存限制||
