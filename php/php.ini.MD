@@ -129,3 +129,7 @@
 |docref_ext|.html||超链接的后缀|
 |error_prepend_string|空值|错误信息前缀的字符串||
 |error_append_string|空值|错误信息后缀的字符串||
+|error_log|空值|错误日志指定的文件，syslog表示系统的错误日志|如果该文件没指定或者没权限写入，则输出到标准输出|
+|arg_separator.output|&|使用php生成的url自读串,http_build_query函数||
+|arg_separator.input|&|php解析输入的url，默认的变量分割符号. 影响$_GET的变量||
+
