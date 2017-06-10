@@ -66,6 +66,6 @@
  
 　2、[php-ext](https://github.com/buchongyu/buchongyu.github.io/tree/master/php-ext/README.md)
   
-　3、[c or c plus plus]()
+　3、[c or c plus plus](https://github.com/buchongyu/buchongyu.github.io/blob/master/c-cpp/README.MD)
 
- 
+　4、[hive-hadoop](https://github.com/buchongyu/buchongyu.github.io/blob/master/hive-hadoop/README.MD)
