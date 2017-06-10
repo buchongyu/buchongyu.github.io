@@ -1,4 +1,4 @@
-#### 简单介绍：
+#### blog简介：
 
 　博客主要分享php语言、php源码阅读、nginx、mysql、nosql、以及linux等相关的技术，热爱linux下的php开发，喜欢服务端编程，工作中也偶尔处理数据(hive-hadoop)。
  
