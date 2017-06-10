@@ -40,3 +40,5 @@
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(2)、echo '<% print "Hello World";' | php
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(3)、php [-f] filename.php
+
+&emsp;&emsp;&emsp;&emsp;5、ISAPI模式(windows下)
