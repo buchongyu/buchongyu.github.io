@@ -55,3 +55,5 @@
 　6、[bejson](http://www.bejson.com/)
  
 　7、[站长工具](http://tool.chinaz.com/port/)
+ 
+　8、[autoconf](https://www.gnu.org/software/autoconf/manual/autoconf.html)
