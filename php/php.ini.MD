@@ -95,3 +95,11 @@
 |implicit_flush|Off|如果设置为On,每次调用完echo,print等后,自动调用flush(),立即输出|cli模式下，改选项默认设置为On|
 |unserialize_callback_func|空值|反序列化回调函数| 反序列化,如果类没有定义,则使用unserialize_callback_func定义的函数来处理.|
 |serialize_precision|17|默认值能保证浮点型数据被解序列化程序解码时不会丢失数据|将浮点型和双精度型数据序列化存储时的精度(有效位数)。(注意：有效位数不会超过precision设置的值)|
+|disable_functions|空值||处于安全考虑,php禁止使用的函数，安全模式对该指令没影响|
+|disable_classes|空值||处于安全考虑,php禁止使用的类,安全模式对该指令没影响|
+|highlight.string|#DD0000||highlight_string函数高亮显示|
+|highlight.comment|#FF9900||highlight_string函数高亮显示|
+|highlight.keyword|#007700||highlight_string函数高亮显示|
+|highlight.default|#0000BB||highlight_string函数高亮显示|
+|highlight.html|#000000||highlight_string函数高亮显示|
+
