@@ -1,9 +1,9 @@
 #### PHP.INI（php的初始化文件）:
-&emsp;&emsp;php的初始化文件(配置文件)，通常被叫做php.ini，它负责配置php行为的许多方面。对于服务器模块版本的php.ini，仅仅会在第一次启动的时候读取配置文件,cli和cgi的版本，每次调用都会读取。
+&emsp;&emsp;php的初始化文件(配置文件)，通常被叫做php.ini，它负责配置php行为的许多方面。对于服务器模块版本的php.ini，仅仅会在第一次启动的时候读取配置文件,cli和cgi的版本，每次调用都会读取，如果配置文件中指令未设置（或者删除），php将会用默认值来填充，大部分指令可以在运行时动态设置(ini_set)，少部分的不可以。
 
-&emsp;&emsp;配置的指令比较简单，都是key=value的类型，value可以是字符串，数字、常量(On, Off, True, False, Yes, No and None)、表达式(E_ALL & ~E_NOTICE)、引号字符串（"foo"）、先前设置的变量${foo}。
+&emsp;&emsp;配置的指令比较简单，都是key=value的类型，大小写敏感，value可以是字符串，数字、常量(On, Off, True, False, Yes, No and None)、表达式(E_ALL & ~E_NOTICE)、引号字符串（"foo"）、先前设置的变量${foo}。
 
-&emsp;&emsp;英文分号表示注释，会被忽略掉，section[]也会被忽略掉。
+&emsp;&emsp;英文分号表示注释，会被忽略掉，section[]也会被忽略掉(除了[PATH=]和[HOST=])，空白和换行也会被忽略掉。
 
 &emsp;&emsp;php.ini的表达式操作符只能有：位操作符和圆括号。位操作符如下：
   
@@ -20,6 +20,8 @@
 &emsp;&emsp;boolean值，On,True,Yes，1 表示真值；Off,False,No,0 表示假值
 
 &emsp;&emsp;字符串值，None和空白表示空字符串，如果是字符串None，需要加上"None"
+
+&emsp;&emsp;[PATH=/home/site/public/secure]只会影响/home/site/public/secure目录下的文件,[HOST=dev.domain]只会影响dev.domain下的文件
 
 -------
 #### 默认的情况下，php在下面的一系列位置寻找php.ini:
