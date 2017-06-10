@@ -108,3 +108,6 @@
 |zend.enable_gc|On|[顽固内存泄露，垃圾回收器](http://www.cnblogs.com/dasn/archive/2010/11/01/1866139.html)|$a = array('one');$a[] = &$a;unset($a);refcount=1,会导致该zal得不到释放,会导致内存泄露，改选项就是为了防止zval由于循环引起的内存泄露|
 |zend.multibyte|空值|取值可以是Off,CP936,Big5,CP949和Shift_JIS等|多字节编码的支持|
 |zend.script_encoding|空值||指定php脚本的编码，php将优先使用declare(encoding=...)，如果没有declare，则使用zend.script_encoding|
+|expose_php||||
+|max_execution_time||||
+|max_input_time||||
