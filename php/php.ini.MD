@@ -93,3 +93,5 @@
 |zlib.output_compression_level|-1|压缩值|1-5，6实际压缩效果不好,cpu很高.|
 |zlib.output_handler|空值||zlib.outour_compression如果被激活,不能使用zlib.output_handler.二者相互冲突. 这个设置和output_handler一样但是顺序不同.|
 |implicit_flush|Off|如果设置为On,每次调用完echo,print等后,自动调用flush(),立即输出|cli模式下，改选项默认设置为On|
+|unserialize_callback_func|空值|反序列化回调函数| 反序列化,如果类没有定义,则使用unserialize_callback_func定义的函数来处理.|
+|serialize_precision|17|默认值能保证浮点型数据被解序列化程序解码时不会丢失数据|将浮点型和双精度型数据序列化存储时的精度(有效位数)。(注意：有效位数不会超过precision设置的值)|
