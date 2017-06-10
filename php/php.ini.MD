@@ -89,7 +89,7 @@
 |precision|14|浮点数有效数字的位数||
 |output_buffering|Off|单位字节，也就是4kb| 控制输出,cli模式下是关闭的.使用var_dump,print,echo 等输出数据的时候,数据默认被写入到output_buffering中,直到写满,才会将这些数据通过tcp传递给前端.也可以是用ob_start()和ob_end_flush()函数.ob_start()开启php的缓存,ob_start会把缓存设置的足够大,即使数据超过了output_buffering,也不会发给浏览器,直到脚本运行结束或者使用了ob_end_flush才会把数据发给浏览器.|
 |output_handler|空值|将脚本的所有输出,重定向到一个函数来处理.如mb_output_handler,字符的编码将被修改为指定的编码.|不能同时使用 mb_output_handler() 和 ob_iconv_handler()，也不能同时使用 ob_gzhandler() 和 zlib.output_compression|
-|zlib.output_compression||||
-|zlib.output_compression_level||||
-|zlib.output_handler||||
-|implicit_flush|Off|每次调用完echo,print等后,自动调用flush(),立即输出|cli模式下，改选项默认设置为On|
+|zlib.output_compression|Off|输出使用zlib压缩|取值可以是On,Off,buffer size|
+|zlib.output_compression_level|-1|压缩值|1-5，6实际压缩效果不好,cpu很高.|
+|zlib.output_handler|空值||zlib.outour_compression如果被激活,不能使用zlib.output_handler.二者相互冲突. 这个设置和output_handler一样但是顺序不同.|
+|implicit_flush|Off|如果设置为On,每次调用完echo,print等后,自动调用flush(),立即输出|cli模式下，改选项默认设置为On|
