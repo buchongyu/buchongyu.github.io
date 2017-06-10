@@ -1,8 +1,27 @@
 #### PHP.INI（php的初始化文件）:
 &emsp;&emsp;php的初始化文件(配置文件)，通常被叫做php.ini，它负责配置php行为的许多方面。对于服务器模块版本的php.ini，仅仅会在第一次启动的时候读取配置文件,cli和cgi的版本，每次调用都会读取。
 
--------
+&emsp;&emsp;配置的指令比较简单，都是key=value的类型，value可以是字符串，数字、常量(On, Off, True, False, Yes, No and None)、表达式(E_ALL & ~E_NOTICE)、引号字符串（"foo"）、先前设置的变量${foo}。
 
+&emsp;&emsp;英文分号表示注释，会被忽略掉，section[]也会被忽略掉。
+
+&emsp;&emsp;php.ini的表达式操作符只能有：位操作符和圆括号。位操作符如下：
+  
+&emsp;&emsp;&emsp;&emsp; |  bitwise OR
+
+&emsp;&emsp;&emsp;&emsp; ^  bitwise XOR
+
+&emsp;&emsp;&emsp;&emsp; &  bitwise AND
+
+&emsp;&emsp;&emsp;&emsp; ~  bitwise NOT
+
+&emsp;&emsp;&emsp;&emsp; !  boolean NOT
+
+&emsp;&emsp;boolean值，On,True,Yes，1 表示真值；Off,False,No,0 表示假值
+
+&emsp;&emsp;字符串值，None和空白表示空字符串，如果是字符串None，需要加上"None"
+
+-------
 #### 默认的情况下，php在下面的一系列位置寻找php.ini:
 
 &emsp;&emsp;1. SAPI模块指定的位置，如：
@@ -46,3 +65,8 @@
 &emsp;&emsp;&emsp;&emsp;(3)、php [-f] filename.php
 
 &emsp;&emsp;5、ISAPI模式(windows下)
+
+-----
+
+#### php.ini文件的详细介绍
+
