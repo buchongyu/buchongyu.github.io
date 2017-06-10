@@ -116,3 +116,9 @@
 |error_reporting||||
 |display_errors||||
 |display_startup_errors||||
+|log_errors||||
+|log_errors_max_len||||
+|ignore_repeated_errors||||
+|ignore_repeated_source||||
+|report_memleaks||||
+|track_errors||||
