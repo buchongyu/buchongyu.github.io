@@ -3,7 +3,13 @@
 
 &emsp;&emsp;默认的情况下，php在下面的一系列位置寻找php.ini:
 
-&emsp;&emsp;&emsp;&emsp;1. SAPI模块指定的位置，(apache的PHPIniDir指定的路径，cgi或者cli模式的php -c 所指定的路径，php-fpm -c 指定的路径)
+&emsp;&emsp;&emsp;&emsp;1. SAPI模块指定的位置，如：
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(1)、apache的PHPIniDir指定的路径
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(2)、cgi或者cli模式的php -c 所指定的路径
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(3)、php-fpm -c 指定的路径
 
 &emsp;&emsp;&emsp;&emsp;2. 当前的工作目录（针对cli模式）
 
@@ -13,7 +19,9 @@
 
 &emsp;&emsp;php常见的运行模式:
 
-&emsp;&emsp;&emsp;&emsp;1. cgi(Common Gateway Interface)模式，LoadModule php5_module modules/libphp5.so，Action application/x-httpd-PHP /cgi-bin/
+&emsp;&emsp;&emsp;&emsp;1. cgi(Common Gateway Interface)模式，如：
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;LoadModule php5_module modules/libphp5.so，Action application/x-httpd-PHP /cgi-bin/
 
 &emsp;&emsp;&emsp;&emsp;2. FastCGI，常驻 (long-live) 型的 CGI)，如：
 
