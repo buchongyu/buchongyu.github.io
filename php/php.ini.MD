@@ -187,6 +187,66 @@
 |phar.readonly|off|默认不能写phar|如果要写phar,需要设置为Off|
 |phar.require_hash|On|要求所有的phar archive都有对应的hash文件||
 |cache_list|空值|webserver启动的时候预加载的Phar包||
+|sql.safe_mode||Off|是否使用SQL安全模式。如果打开，指定默认值的数据库连接函数将会使用这些默认值代替支持的参数。对于每个不同数据库的连接函数，其默认值请参考相应的手册页面|
+|mysql.allow_local_infile||允许Mysql的Load Data语句访问||
+|mysql.allow_persistent||允许或者禁止长链接||
+|mysql.cache_size||缓存槽的数量||
+|mysql.max_persistent||最大的长连接数量|-1不限制|
+|mysql.max_links||最大链接数(持久和非持久)||
+|mysql.default_port||默认的端口||
+|mysql.default_socket||默认的socket||
+|mysql.default_host||默认的host||
+|mysql.default_user||默认的用户名||
+|mysql.default_password||默认的密码||
+|mysql.connect_timeout||默认的链接超时||
+|bcmath.scale||所有bcmath函数的小数位数，0||
+|session.save_handler|file|存数据，取回数据的控制方式||
+|session.save_path|/tmp|数据文件的保存路劲||
+|session.use_cookies|1|是否启用cookie||
+|session.use_only_cookies|1|表示是否只开启基于cookies的session的会话方式||
+|session.name|PHPSESSION|cookie中session的名字||
+|session.auto_start||请求启动时初始化session||
+|session.cookie_lifetime||按照秒记的cookie的保存时间||
+|session.cookie_path||cookie的有效路径||
+|session.cookie_domain||cookie的有效域名||
+|session.cookie_httponly||是否将httpOnly标志增加到cookie上||
+|session.serialize_handler||用于序列化数据的处理器. php是标准的PHP序列化器||
+|session.gc_probability||定义'垃圾回收'进程在每次session初始化时开始的比例. gc_probability/gc_divisor||
+|session.gc_divisor||定义'垃圾回收'进程在每次session初始化时开始的比例. gc_probability/gc_divisor||
+|session.gc_maxlifetime||session在服务器的存储时间||
+|session.referer_check||检查 HTTP引用以使额外包含于URLs中的ids无效||
+|session.entropy_length||从文件中读取多少字节||
+|session.entropy_file||指定这里创建session id||
+|session.cache_limiter|函数是指定会话页面所使用的缓冲控制方法||session_cache_limiter('private')时，用处是让表单history.go(-1)的时候，填写内容不丢失！就避免页面失效的警告|
+|session.cache_expire||以分钟数指定缓冲的会话页面的存活期，此设定对 nocache 缓冲控制方法无效。默认为 180。|缓存期限在每次请求启动的时候，被设置为保存在session.cache_expire里的默认值180分钟。因此，必须在每次请求时候调用session_cache_expire()（在session_start()调用前调|
+|session.use_trans_sid||当客户端浏览器禁止cookie的时候，页面上的链接会基于url传递SESSIONID。||
+|session.hash_function||选择一个函数生成session id||
+|session.hash_bits_per_character||当转换二进制hash数据奥可读形式是，每个字符保留位数||
+|url_rewriter.tags||哪些地方需要用来传递sessionId||
+|session.upload_progress.enabled||是否启用上传进度报告||
+|session.upload_progress.cleanup|| 是否在上传完成后及时删除进度数据(默认开启, 推荐开启)||
+|session.upload_progress.prefix||上传进度的前缀||
+|session.upload_progress.name||请注意PHP_SESSION_UPLOAD_PROGRESS是在file前面，所以服务器读取HTTP Request请求的内容时，先获得了PHP_SESSION_UPLOAD_PROGRESS的值，然后才开始读取文件的内容| 如果POST[session.upload_progress.name]没有被设置, 则不会报告进度|
+|session.upload_progress.freq||进度更新频率，百分比级别||
+|session.upload_progress.min_freq||进度更新频率，秒级别||
+|assert.active||断言这个功能应该只被用来调试||
+|assert.warning||每个失败的断言产生一条 PHP 警告信息||
+|assert.bail||失败的断言将终止脚本的执行||
+|assert.callback||失败的断言调用的用户函数||
+|assert.quiet_eval||如果启用了，在执行时错误将不会被显示（隐式的 error_reporting(0)）。 如果禁用了，错误将根据 error_reporting() 的设置来显示||
+|mbstring.language||设置默认语言。默认值为neutral，就是UTF-8，这样就不错||
+|mbstring.internal_encoding||设置默认的内部编码。如果设置过mbstring.language，必须放置在之后，不然无法覆盖之前的设置||
+|mbstring.http_input||http输入编码。默认值pass，就是不处理||
+|mbstring.http_output||默认的http输出编码，前提是必须将output_buffering打开并将output_handler设置为mb_output_handler。默认值pass，也是不处理||
+|mbstring.encoding_translation||打开后将会自动将输入编码转换为internal_encoding所指定的编码（同样慎用，都交给机器未必是好事）。默认值Off，万幸||
+|mbstring.detect_order||设置编码的检测顺序，在使用mb_detect_encoding而又没有在第二个参数中指明检测 编码顺讯列表时，将会以这里设置的为准。默认值auto，在language为neutral时也就是代表检测顺序为(ASCII, UTF-8)。||
+|mbstring.substitute_character||编码无法转换时的处理方式。默认值为NULL，也就是不显示无法转换的字符。你也可以设置为long，显示字符的hex编码；或者指定其他特定字符（例如”@@”，呵呵）||
+|mbstring.func_overload||bstring 支持一个“函数重载”功能，将对应的多字节版本重载到标准字符处理函数上，例如你能够让这类应用在不修改代码的前提下添加多字节的处理能力。 比如，启用函数重载后，mb_substr() 将会代替 substr() 被调>     用。 在很多情况下这个功能允许让仅支持单字节编码的应用简单地和多字节环境对接||
+|mbstring.strict_detection||否打开严格的编码检测模式 在处理有不同编码或错误编码字 符混杂情况（例如mb_detect_encoding(”testä”)）下打开这个参数能够防止mb_detect_encoding返回错误的编 码||
+|mbstring.http_output_conv_mimetype||在输出缓冲中转换字符编码的回调函数, 是一个 ob_start() 回调函数|将输出缓冲中的字符从内部字符编码转换为 HTTP 输出的字符编码。|
+|gd.jpeg_ignore_warning||pef 解码失败忽略警告||
+|tidy.default_config||tidy默认的配置文件||
+|tidy.clean_output|| 是否tidy应该自动清理和修复输出||
 
 其它：
 #### date_default_timezone_get 获取的时间的顺序
