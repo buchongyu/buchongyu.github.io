@@ -1,3 +1,5 @@
-#### php.ini文件
+#### 目录索引
 
-#### linux下php编译安转以及php的运行方式
+　[php.ini文件]
+
+　[linux下php编译安转以及php的运行方式]
