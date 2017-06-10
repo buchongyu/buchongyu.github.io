@@ -111,5 +111,5 @@
 |expose_php|Off|是否暴露php,http头文件反馈:X-Powered-By:PHP/5.4.11||
 |max_execution_time|600|单位，秒|php脚本的最大执行时间，cli模式下默认是0（不限制）|
 |max_input_time|60|单位，秒|POST GET PUT 等方式接收数据的最大时间限制，cli模式下默认是-1（不限制）|
-|max_input_nesting_level|60|单位，词|输入变量的最大嵌套层次|
+|max_input_nesting_level|60|单位，层|输入变量的最大嵌套层次|
 |memory_limit|1024M|脚本执行的最大内存限制|-1表示无限制|
