@@ -60,8 +60,12 @@
 
 -------
 
-#### blog的目录
+#### blog主要目录
 
 　1、php
+ 
+  2、php-ext
+  
+  3、c or c plus plus
 
  
