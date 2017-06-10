@@ -136,7 +136,7 @@
 |request_order|None||如果这只为GET和POST,REUEST数组有哪些数组组成,该变量就是GET和POST|
 |register_argc_argv|Off|命令行下传递给脚本的变量. $argc和$argv||
 |auto_globals_jit|On|ENV SERVER REQUEST只会在第一次用的时候创建,性能优化使用||
-|enable_post_data_reading|On| 禁止这个选项将会使 $_POST 和 $_FILES 不会被填充，唯一能够访问post数据的方法是通过 php://input 流包装器。这在代理请求或者是在内存中更高效处理post数据的时候是非常有用的。||
+|enable_post_data_reading|On||禁止这个选项将会使 $_POST 和 $_FILES 不会被填充，唯一能够访问post数据的方法是通过 php://input 流包装器。这在代理请求或者是在内存中更高效处理post数据的时候是非常有用的。|
 |post_max_size|100M|post方式推送的最大数据长度,upload_max_filesize应该小于这个值,这个值应该小于memory_limit.||
 |auto_prepend_file|空值||在执行php文件之前执行的文件|
 |auto_append_file|空值||在执行php文件之后执行的文件|
@@ -149,7 +149,7 @@
 |user_dir|空值|[cgi web 服务器的主文档目录中包含动态内容不太安全](http://www.php.net/manual/zh/security.cgi-bin.doc-root.php)||
 |enable_dl|Off||允许php运行时加载动态链接库|
 |cgi.nph|1|强制cgi在每个请求时发送status:200||
-|cgi.redirect_status_env||如果cgi.force_redirect被打开,并且你没有在Apache或者Netscape(iPlanet) web服务器下运行,你也许需要设置一个环境变量名让PHP来查找让其可以获取后继续执行. 设置此变量可能引起安全问题, 在设置之前请先了解可能引起的后果||
+|cgi.redirect_status_env|||如果cgi.force_redirect被打开,并且你没有在Apache或者Netscape(iPlanet) web服务器下运行,你也许需要设置一个环境变量名让PHP来查找让其可以获取后继续执行. 设置此变量可能引起安全问题, 在设置之前请先了解可能引起的后果|
 |cgi.fix_pathinfo|1||PHP CGI 以 / 为分隔符号从后向前依次检查SCRIPT_FILENAME路径|
 |fastcgi.impersonate|0||windows iis选项|
 |fastcgi.logging|0||FastCGI 日志在 IIS 下应被关闭。如果激活，则任何类的任何消息都被FastCGI 视为错误条件从而导致 IIS 产生 HTTP 500 错误。|
