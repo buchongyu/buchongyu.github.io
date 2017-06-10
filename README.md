@@ -62,10 +62,10 @@
 
 #### blog主要目录
 
-　1、php
+　1、[php](https://github.com/buchongyu/buchongyu.github.io/tree/master/php/README.md)
  
-　2、php-ext
+　2、[php-ext](https://github.com/buchongyu/buchongyu.github.io/tree/master/php-ext/README.md)
   
-　3、c or c plus plus
+　3、[c or c plus plus]()
 
  
