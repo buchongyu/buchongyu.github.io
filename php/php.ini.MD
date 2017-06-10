@@ -8,7 +8,7 @@
 &emsp;&emsp;英文分号表示注释，会被忽略掉，section[]也会被忽略掉(除了[PATH=]和[HOST=]外)，空白和换行也会被忽略掉。
 
 &emsp;&emsp;php.ini的表达式操作符只能有：位操作符和圆括号。位操作符如下：
-  
+
 &emsp;&emsp;&emsp;&emsp; |  bitwise OR
 
 &emsp;&emsp;&emsp;&emsp; ^  bitwise XOR
@@ -83,5 +83,8 @@
 | 指令名称  | 默认值| 默认值解释|备注|
 |:--------|---------:|:-------:|:-------:|
 | user_ini.filename| .user.ini | 默认搜索路径 |PHP 会在每个目录下搜寻的文件名；如果设定为空字符串则 PHP 不会搜寻.从被执行的 PHP 文件所在目录开始一直上升到 web 根目录（DOCUMENT_ROOT 所指定的）。如果被执行的 PHP 文件在 web 根目录之外，则只扫描该目录,只有具有 PHP_INI_PERDIR 和 PHP_INI_USER 模式的 INI 设置可被.user.ini识别|
+| user_ini.cache_ttl| 300| 单位（秒），也就是5分钟|重新读取用户 INI 文件的间隔时间|
+| engine| On| 开启php文件的解析|只在apache下开启下生效，On表示开启解析，Off表示关闭解析|
+| user_ini.cache_ttl| 300| 单位（秒），也就是5分钟|重新读取用户 INI 文件的间隔时间|
 | user_ini.cache_ttl| 300| 单位（秒），也就是5分钟|重新读取用户 INI 文件的间隔时间|
 
