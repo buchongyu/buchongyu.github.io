@@ -104,5 +104,7 @@
 |highlight.html|#000000|highlight_string("Hello world! <?php phpinfo(); ?>");|highlight_string函数高亮显示|
 |ignore_user_abort|On|默认断开后继续执行|与客户端断开是否终止脚本的执行,设置为 true，则忽略与用户的断开，如果设置为 false，会导致脚本停止运行|
 |realpath_cache_size|16k|把PHP所用到文件的realpath进行缓存，以便PHP再使用这些文件的时候不需要再去include_path中查找，加快PHP的执行速度。|决定 PHP 所使用的真实路径(非软连接)缓冲区的大小。此值在 PHP 会打开很多文件的系统下应增大，以反映出所执行文件操作的数量|
-|realpath_cache_ttl|120|php所使用的真是路径缓存的过期时间|由于realpath会 展开symlink(即软连接)，所以如果你使用修改symlink目标这种方式发布应用的新版本的话，realpath cache会导致一些问题的出现.当你修改symlink使其指向一个新的release目录时候，由于realpath cache所缓存内容还没有过期，于是就会出现应用使用的还是旧的release，直到realpath cache所缓存内容过期失效为止(默认120秒)，或者重启server。|
+|realpath_cache_ttl|120|[php所使用的真是路径缓存的过期时间](http://zhengdl126.iteye.com/blog/1575233)|由于realpath会 展开symlink(即软连接)，所以如果你使用修改symlink目标这种方式发布应用的新版本的话，realpath cache会导致一些问题的出现.当你修改symlink使其指向一个新的release目录时候，由于realpath cache所缓存内容还没有过期，于是就会出现应用使用的还是旧的release，直到realpath cache所缓存内容过期失效为止(默认120秒)，或者重启server。|
 |zend.enable_gc|On|[顽固内存泄露，垃圾回收器](http://www.cnblogs.com/dasn/archive/2010/11/01/1866139.html)|$a = array('one');$a[] = &$a;unset($a);refcount=1,会导致该zal得不到释放,会导致内存泄露，改选项就是为了防止zval由于循环引起的内存泄露|
+|zend.multibyte|空值|取值可以是Off,CP936,Big5,CP949和Shift_JIS等|多字节编码的支持|
+|zend.script_encoding|空值||指定php脚本的编码，php将优先使用declare(encoding=...)，如果没有declare，则使用zend.script_encoding|
