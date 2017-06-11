@@ -14,7 +14,7 @@
 
 &emsp;&emsp;&emsp;&emsp;--with-config-file-path=$prefix/etc --enable-embed --with-libedit --enable-fpm
 
-&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;http://blog.csdn.net/juan083/article/details/51155880
 
 
 #### 编译安装各种配置项以及依赖库
