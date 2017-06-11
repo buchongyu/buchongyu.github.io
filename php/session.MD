@@ -50,4 +50,4 @@
 
 &emsp;&emsp;3、使用session_regenerate_id函数之后，会把之前设置的session变量同步到新的sid中
 
-&emsp;&emsp;4、使用die等函数不会保存session
+&emsp;&emsp;4、使用die()等函数不会保存session
