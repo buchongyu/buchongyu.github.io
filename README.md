@@ -42,7 +42,7 @@
  
 #### 常用的工具或者网站
 
-　1、[git](https://git-scm.com/book/en/v2) | [gotgithub](https://github.com/gotgit/gotgithub)
+　1、[git](https://git-scm.com/book/en/v2) or [gotgithub](https://github.com/gotgit/gotgithub)
  
 　2、[hadoop-mapreduce](http://hadoop.apache.org/docs/r1.0.4/cn/mapred_tutorial.html)
   
