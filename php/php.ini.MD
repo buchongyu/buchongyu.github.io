@@ -261,7 +261,7 @@
 
 &emsp;&emsp;1  data_default_timezone_set
 
-&emsp;&emsp;2、TZ环境变量
+&emsp;&emsp;2、TZ环境变量（TZ=Asia/Shanghai）
 
 &emsp;&emsp;3、data.timezone配置
 
