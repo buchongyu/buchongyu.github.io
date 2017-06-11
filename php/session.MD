@@ -12,9 +12,27 @@
 
 &emsp;&emsp;setcookie(session_name(),session_id(),session.cookie_lifetime,session.cookie_path,session.cookie_domain)，cookie_path默认为跟路径下面，如有需要用户完全可以自己实现一套php session处理机制
 
+#### PHP SESSION处理流程
+
+&emsp;&emsp;SESSOIN ID的处理流程:
+
+&emsp;&emsp;&emsp;&emsp;1、session_start()是session机制的开始（在此之前不予许有任何输入值），它有一定概率开启垃圾回收,因为session是存放在文件中，PHP自身的垃圾回收是无效的，SESSION的回收是要删文件的，这个概率是根据php.ini的配置决定的，概率 = gc_probability/gc_divisor * 100%
+
+&emsp;&emsp;&emsp;&emsp;2、session会判断当前是否有$_COOKIE[session_name()];session_name()返回保存session_id的COOKIE键值，php.ini中session.name = PHPSESSID 
+
+&emsp;&emsp;&emsp;&emsp;3、如果不存在会生成一个session_id,然后把生成的session_id作为COOKIE的值传递到客户端，这一步执行了setcookie()操作，COOKIE是在header头中发送的
+
+&emsp;&emsp;&emsp;&emsp;4、 如果存在那么session_id =$_COOKIE[session_name]，去ini_get(session.save_path). '/' . 'SESS_'.session_id()寻找文件，读取并饭序列化
+
+&emsp;&emsp;为SESSION赋值:
+
+&emsp;&emsp;&emsp;&emsp;1、
+
+&emsp;&emsp;&emsp;&emsp;2、
+
 #### PHP SESSION 注意事项 
 
-&emsp;&emsp;1、如果使用基于cookie的session(cookie-based sessions),那么在使用Session_start()、session_regenerate_id()之前浏览器不能有任何输出，否则会出现"Cannot send session cache limiter – headers already sent"错误,所以首先要确保Session_start()在开始输出之前执行,一般直接放到PHP文件的最上方.
+&emsp;&emsp;1、如果使用基于cookie的session(cookie-based sessions),那么在使用Session_start()、session_regenerate_id()等session操作之前之前浏览器不能有任何输出，否则会出现"Cannot send session cache limiter – headers already sent"错误,所以首先要确保Session_start()在开始输出之前执行,一般直接放到PHP文件的最上方.
 
 &emsp;&emsp;2、SESSION的垃圾收集机制是比较坑爹的，他是根据概率来gc的，如果lifetime这段时间内没有请求，session无法回收。严格设置session的过期时间如下:
 
@@ -25,3 +43,7 @@
 &emsp;&emsp;&emsp;&emsp;(3)、为每个session值加入时间戳，然后在php程序调用时进行判断
 
 &emsp;&emsp;&emsp;&emsp;(4)、使用Memcache或者redis中（前提：save_handler不是file的情况）
+
+&emsp;&emsp;&emsp;&emsp;(5)、自己写脚本删除(肯定没有php程序调用时判断准确)
+
+
