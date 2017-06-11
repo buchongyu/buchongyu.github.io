@@ -50,4 +50,11 @@
 
 &emsp;&emsp;3、使用session_regenerate_id函数之后，会把之前设置的session变量同步到新的sid中
 
-&emsp;&emsp;4、使用die()等函数不会保存session
+&emsp;&emsp;4、使用die()等函数不会保存session而直接退出
+
+#### 用户自定义session处理机制：session.save_handler = user
+
+&emsp;&emsp;1、设置session处理函数session_set_save_handler('open','close','read','write','destroy','gc')
+
+&emsp;&emsp;2、session可以自定义保存在[数据库](http://www.cnblogs.com/cbryge/p/5935742.html)（mysql）中,redis,mysql或者其它的存储介质中
+
