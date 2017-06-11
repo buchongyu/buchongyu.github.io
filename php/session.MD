@@ -24,11 +24,13 @@
 
 &emsp;&emsp;&emsp;&emsp;4、 如果存在那么session_id =$_COOKIE[session_name]，去ini_get(session.save_path). '/' . 'SESS_'.session_id()寻找文件，读取并饭序列化
 
-&emsp;&emsp;为SESSION赋值:
+&emsp;&emsp;SESSION增删操作:
 
-&emsp;&emsp;&emsp;&emsp;1、
+&emsp;&emsp;&emsp;&emsp;1、如新添加一个值$_SESSION['test'] ='blah'; 那么这个$_SESSION只会维护在内存中，当脚本执行结束的时候，用把$_SESSION的值写入到session_id指定的文件夹中，然后关闭相关资源
 
-&emsp;&emsp;&emsp;&emsp;2、
+&emsp;&emsp;&emsp;&emsp;2、在脚本结束的时候会执行SESSION写入操作，把$_SESSION中值写入到session_id命名的文件中，可能已经存在，可能需要创建新的文件
+
+&emsp;&emsp;&emsp;&emsp;3、SESSION发出去的COOKIE一般属于即时COOKIE，保存在内存中，当浏览器关闭后，才会过期，假如需要人为强制过期，比如 退出登录，而不是关闭浏览器，那么就需要在代码里销毁SESSION
 
 #### PHP SESSION 注意事项 
 
@@ -46,4 +48,6 @@
 
 &emsp;&emsp;&emsp;&emsp;(5)、自己写脚本删除(肯定没有php程序调用时判断准确)
 
+&emsp;&emsp;3、使用session_regenerate_id函数之后，会把之前设置的session变量同步到新的sid中
 
+&emsp;&emsp;4、使用die等函数不会保存session
