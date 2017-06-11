@@ -6,4 +6,8 @@
 
 #### PHP源码安装介绍:
 
+&emsp;&emsp;1、wget http://jp2.php.net/distributions/php-7.1.6.tar.bz2
 
+&emsp;&emsp;2、tar -jxvf php-7.1.6 && cd php-7.1.6
+
+&emsp;&emsp;3、./configure --prefix=$prefix --with-mysql=mysqlnd --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-config-file-path=$prefix/etc --enable-force-cgi-redirect --with-readline --enable-fpm
