@@ -11,3 +11,7 @@
 &emsp;&emsp;2、tar -jxvf php-7.1.6 && cd php-7.1.6
 
 &emsp;&emsp;3、./configure --prefix=$prefix --with-mysql=mysqlnd --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-config-file-path=$prefix/etc --enable-force-cgi-redirect --with-readline --enable-fpm
+
+
+#### 各种配置项的解释
+
