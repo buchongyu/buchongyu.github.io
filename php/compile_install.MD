@@ -12,7 +12,7 @@
 
 &emsp;&emsp;3、./configure --prefix=$prefix --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd 
 
-&emsp;&emsp;&emsp;&emsp;--with-config-file-path=$prefix/etc --with-libedit --enable-fpm
+&emsp;&emsp;&emsp;&emsp;--with-config-file-path=/tmp/php/etc/php.ini --with-config-file-scan-dir=/tmp/php/etc/conf.d --with-libedit --enable-fpm
 
 &emsp;&emsp;&emsp;&emsp;http://blog.csdn.net/juan083/article/details/51155880
 
