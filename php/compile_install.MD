@@ -13,5 +13,5 @@
 &emsp;&emsp;3、./configure --prefix=$prefix --with-mysql=mysqlnd --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-config-file-path=$prefix/etc --enable-force-cgi-redirect --with-readline --enable-fpm
 
 
-#### 编译安装各种配置项的解释
+#### 编译安装各种配置项以及依赖库
 
