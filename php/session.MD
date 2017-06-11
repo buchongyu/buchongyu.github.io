@@ -10,7 +10,7 @@
 
 &emsp;&emsp;用户第一次请求的过程中，服务端生成session_id存储到本地：ini_get(session.save_path). '/' . 'SESS_'.session_id()文件中。并且设置COOKIE，如下：
 
-&emsp;&emsp;setcookie(session_name(),session_id(),session.cookie_lifetime,session.cookie_path,session.cookie_domain)，cookie_path默认为跟路径下面
+&emsp;&emsp;setcookie(session_name(),session_id(),session.cookie_lifetime,session.cookie_path,session.cookie_domain)，cookie_path默认为跟路径下面，如有需要用户完全可以自己实现一套php session处理机制
 
 #### PHP SESSION 注意事项 
 
