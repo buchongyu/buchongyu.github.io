@@ -77,9 +77,12 @@
 |:-------:|:-------:|:-------:|
 |[libmcrypt](ftp://mcrypt.hellug.gr/pub/crypto/mcrypt/libmcrypt/libmcrypt-2.5.7.tar.gz)|配置命令:./configure --enable-shared=no --with-pic|[网址](http://mcrypt.hellug.gr/lib/)|
 |[mhash](https://jaist.dl.sourceforge.net/project/mhash/mhash/0.9.9.9/mhash-0.9.9.9.tar.bz2)|配置命令:./configure --enable-shared=no --with-pic|
-|[mcrypt](http://iweb.dl.sourceforge.net/project/mcrypt/MCrypt/2.6.8/mcrypt-2.6.8.tar.gz)|配置命令:LD_LIBRARY_PATH,LDFLAGS,CFLAGS,./configure --enable-shared=no --with-pic --with-libmcrypt-prefix|依赖libmcrypt和mhash,mac中#include<malloc.h>需要改为#include<sys/malloc.h>|
-|[zlib](https://jaist.dl.sourceforge.net/project/libpng/zlib/1.2.11/zlib-1.2.11.tar.gz)||[官网](http://www.zlib.net/)|
-|[openssl](http://www.openssl.org/source/openssl-1.0.2h.tar.gz)|配置命令:./config --prefix=$openssl/ssl zlib shared,依赖:PKG_CONFIG_PATH,LD_LIBRARY_PATH,LDFLAGS,CFLAGS|依赖zlib|
+|[mcrypt](http://iweb.dl.sourceforge.net/project/mcrypt/MCrypt/2.6.8/mcrypt-2.6.8.tar.gz)|配置命令:./configure --enable-shared=no --with-pic --with-libmcrypt-prefix|依赖libmcrypt和mhash,mac中#include<malloc.h>需要改为#include<sys/malloc.h>|
+|[zlib](https://jaist.dl.sourceforge.net/project/libpng/zlib/1.2.11/zlib-1.2.11.tar.gz)|./configure --prefix=/root/tools/thirtypary/zlib|[官网](http://www.zlib.net/)|
+|[openssl](http://www.openssl.org/source/openssl-1.0.2h.tar.gz)|配置命令:./config --prefix=$openssl/ssl zlib shared|依赖zlib|
 |[libcurl](https://curl.haxx.se/download/curl-7.54.0.tar.bz2)|配置命令:./configure --enable-shared --with-pic --disable-gopher|依赖[openssl](http://www.openssl.org/source/openssl-1.0.2h.tar.gz)|
+|[libxml2](http://xmlsoft.org/downloads.html)|配置命令:./configure --enable-shared --with-pic|[官网](ftp://xmlsoft.org/libxml2/libxml2-2.9.2.tar.gz)|
+
+注意:库文件安装完成后,最好配置:PATH,LD_LIBRARY_PATH,CFLAGS,LDFLAGS,C_INCLUDE_PATH,LIBRARY_PATH
 
 #### PHP的常用扩展
