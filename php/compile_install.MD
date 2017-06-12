@@ -56,27 +56,25 @@
 |--enable-sysvshm|共享内存，和 shmop 的差别是提供的操作函数不同，支持 key、value操作|
 |--enable-wddx|启用wddx,WDDX 是一项允许在保持数据完整性的前提下在系统格式中立的系统间交换数据和数据结构的XML技术|
 |--enable-zip|包含zip读写支持|
-|--disable-zend-signals||
+|--disable-zend-signals|禁用zend信号量|
 |--enable-shared|编译共享模块|
 |--enable-static|编译静态模块|
 |--disable-libtool-lock |避免死锁|
 |--with-pic |尝试生成pic代码|
-
-|--with-xmlrpc||
-
-|--with-mysql|php7中Mysql扩展被正式的移除,使用Mysqli和pdo|
+|--with-xmlrpc=dir|包含XMLRPC-EPI支持|
+|--with-mysqlnd|php7中Mysql扩展被正式的移除,使用Mysqli和pdo|
 |--with-mysqli=mysqlnd|安装mysqli|
 |--with-pdo-mysql=mysqlnd|安装php的pdo|
 |--with-config-file-path=$prefix/etc/php.ini|指定ini文件的路径|
 |--with-config-file-scan-dir=$prefix/etc/conf.d|指定ini文件的其它搜寻路径|
 |--with-curl=$curl_path|如果不在include目录下,需要手动指定依赖库目录|
-|--with-openssl-dir||
-|--with-libedit||
+|--with-openssl-dir=$dir|指定openssl的安装目录|
+|--with-libedit=$dir|libedit readline更换|
 
 #### PHP的各种扩展安装依赖的库
 |依赖库|配置选项|备注|
 |:-------:|:-------:|:-------:|
-|[libmcrypt](ftp://mcrypt.hellug.gr/pub/crypto/mcrypt/libmcrypt/libmcrypt-2.5.7.tar.gz),[网址](http://mcrypt.hellug.gr/lib/)|配置命令:./configure --enable-shared=no --with-pic|
+|[libmcrypt](ftp://mcrypt.hellug.gr/pub/crypto/mcrypt/libmcrypt/libmcrypt-2.5.7.tar.gz)|配置命令:./configure --enable-shared=no --with-pic|[网址](http://mcrypt.hellug.gr/lib/)|
 |[mhash](https://jaist.dl.sourceforge.net/project/mhash/mhash/0.9.9.9/mhash-0.9.9.9.tar.bz2)|配置命令:./configure --enable-shared=no --with-pic|
 |[mcrypt](http://iweb.dl.sourceforge.net/project/mcrypt/MCrypt/2.6.8/mcrypt-2.6.8.tar.gz)|配置命令:LD_LIBRARY_PATH,LDFLAGS,CFLAGS,./configure --enable-shared=no --with-pic --with-libmcrypt-prefix|需要配置libmcrypt和mhash|
 |[openssl](http://www.openssl.org/source/openssl-1.0.2h.tar.gz)|配置命令:./config --prefix=$openssl/ssl zlib shared|安装openssl扩展需要先安装libmcrypt,安装后需要配置:PKG_CONFIG_PATH,LD_LIBRARY_PATH,LDFLAGS,CFLAGS|
@@ -84,6 +82,3 @@
 
 
 ./configure --prefix=/tmp/php --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-config-file-path=/tmp/php/etc/php.ini --with-config-file-scan-dir=/tmp/php/etc/conf.d --with-libedit --enable-fpm --with-mysqld --with-curl=/tmp/libcurl --with-openssl-dir=/tmp/openssl --enable-sockets --enable-soap --enable-bcmath --enable-shmop --enable-calendar --with-zlib --enable-pcntl --enable-ftp --with-xmlrpc --enable-mbstring --enable-zip --enable-sysvsem --enable-sysvshm --enable-sysvmsg  && make -j8 && make install
-
-
-./configure --prefix=/tmp/php --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-config-file-path=/tmp/php/etc/php.ini --with-config-file-scan-dir=/tmp/php/etc/conf.d --with-libedit --enable-fpm --enable-mysqld --with-curl=/tmp/libcurl --with-openssl-dir=/tmp/openssl --enable-sockets --enable-soap --enable-bcmath --enable-shmop --enable-calendar --with-zlib --enable-pcntl --enable-ftp --with-xmlrpc --enable-mbstring --enable-zip --enable-sysvsem --enable-sysvshm --enable-sysvmsg  && make -j8 && make install
