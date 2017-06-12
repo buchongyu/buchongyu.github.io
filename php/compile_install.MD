@@ -79,4 +79,4 @@
 |[mhash](https://jaist.dl.sourceforge.net/project/mhash/mhash/0.9.9.9/mhash-0.9.9.9.tar.bz2)|配置命令:./configure --enable-shared=no --with-pic|
 |[mcrypt](http://iweb.dl.sourceforge.net/project/mcrypt/MCrypt/2.6.8/mcrypt-2.6.8.tar.gz)|配置命令:LD_LIBRARY_PATH,LDFLAGS,CFLAGS,./configure --enable-shared=no --with-pic --with-libmcrypt-prefix|依赖libmcrypt和mhash|
 |[openssl](http://www.openssl.org/source/openssl-1.0.2h.tar.gz)|配置命令:./config --prefix=$openssl/ssl zlib shared,依赖:PKG_CONFIG_PATH,LD_LIBRARY_PATH,LDFLAGS,CFLAGS|依赖mcrypt|
-|[libcurl依赖openssl](https://curl.haxx.se/download/curl-7.54.0.tar.bz2)| --with-curl=libcurl安装目录|配置命令:./configure --enable-shared --with-pic --disable-gopher|依赖[libcurl](https://curl.haxx.se/download/curl-7.54.0.tar.bz2)|
+|[libcurl](https://curl.haxx.se/download/curl-7.54.0.tar.bz2)|配置命令:./configure --enable-shared --with-pic --disable-gopher|依赖[openssl]((http://www.openssl.org/source/openssl-1.0.2h.tar.gz)|
