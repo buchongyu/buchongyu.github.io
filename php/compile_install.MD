@@ -60,8 +60,8 @@
 |--enable-shared|编译共享模块|
 |--enable-static|编译静态模块|
 |--disable-libtool-lock |避免死锁|
-|--with-pic |尝试生成pic代码|
-|--with-xmlrpc=dir|包含XMLRPC-EPI支持|
+|--with-pic | 尝试生成pic代码|
+|--with-xmlrpc=$dir|包含XMLRPC-EPI支持|
 |--with-mysqlnd|php7中Mysql扩展被正式的移除,使用Mysqli和pdo|
 |--with-mysqli=mysqlnd|安装mysqli|
 |--with-pdo-mysql=mysqlnd|安装php的pdo|
@@ -70,15 +70,13 @@
 |--with-curl=$curl_path|如果不在include目录下,需要手动指定依赖库目录|
 |--with-openssl-dir=$dir|指定openssl的安装目录|
 |--with-libedit=$dir|libedit readline更换|
+|--with-zlib||
 
 #### PHP的各种扩展安装依赖的库
 |依赖库|配置选项|备注|
 |:-------:|:-------:|:-------:|
 |[libmcrypt](ftp://mcrypt.hellug.gr/pub/crypto/mcrypt/libmcrypt/libmcrypt-2.5.7.tar.gz)|配置命令:./configure --enable-shared=no --with-pic|[网址](http://mcrypt.hellug.gr/lib/)|
 |[mhash](https://jaist.dl.sourceforge.net/project/mhash/mhash/0.9.9.9/mhash-0.9.9.9.tar.bz2)|配置命令:./configure --enable-shared=no --with-pic|
-|[mcrypt](http://iweb.dl.sourceforge.net/project/mcrypt/MCrypt/2.6.8/mcrypt-2.6.8.tar.gz)|配置命令:LD_LIBRARY_PATH,LDFLAGS,CFLAGS,./configure --enable-shared=no --with-pic --with-libmcrypt-prefix|需要配置libmcrypt和mhash|
-|[openssl](http://www.openssl.org/source/openssl-1.0.2h.tar.gz)|配置命令:./config --prefix=$openssl/ssl zlib shared|安装openssl扩展需要先安装libmcrypt,安装后需要配置:PKG_CONFIG_PATH,LD_LIBRARY_PATH,LDFLAGS,CFLAGS|
-|[libcurl依赖openssl](https://curl.haxx.se/download/curl-7.54.0.tar.bz2)| --with-curl=libcurl安装目录|配置命令:./configure --enable-shared --with-pic --disable-gopher|需要先安装[libcurl](https://curl.haxx.se/download/curl-7.54.0.tar.bz2)|
-
-
-./configure --prefix=/tmp/php --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-config-file-path=/tmp/php/etc/php.ini --with-config-file-scan-dir=/tmp/php/etc/conf.d --with-libedit --enable-fpm --with-mysqld --with-curl=/tmp/libcurl --with-openssl-dir=/tmp/openssl --enable-sockets --enable-soap --enable-bcmath --enable-shmop --enable-calendar --with-zlib --enable-pcntl --enable-ftp --with-xmlrpc --enable-mbstring --enable-zip --enable-sysvsem --enable-sysvshm --enable-sysvmsg  && make -j8 && make install
+|[mcrypt](http://iweb.dl.sourceforge.net/project/mcrypt/MCrypt/2.6.8/mcrypt-2.6.8.tar.gz)|配置命令:LD_LIBRARY_PATH,LDFLAGS,CFLAGS,./configure --enable-shared=no --with-pic --with-libmcrypt-prefix|依赖libmcrypt和mhash|
+|[openssl](http://www.openssl.org/source/openssl-1.0.2h.tar.gz)|配置命令:./config --prefix=$openssl/ssl zlib shared,依赖:PKG_CONFIG_PATH,LD_LIBRARY_PATH,LDFLAGS,CFLAGS|依赖mcrypt|
+|[libcurl依赖openssl](https://curl.haxx.se/download/curl-7.54.0.tar.bz2)| --with-curl=libcurl安装目录|配置命令:./configure --enable-shared --with-pic --disable-gopher|依赖[libcurl](https://curl.haxx.se/download/curl-7.54.0.tar.bz2)|
