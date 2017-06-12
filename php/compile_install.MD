@@ -22,3 +22,16 @@
 | 配置项 |备注|
 |:--------:|:-------:|
 |--prefix|php的安装prefix(路径)|
+|--enable-fpm|启用fast cgi的fpm支持|
+|--with-mysql|php7中Mysql扩展被正式的移除,使用Mysqli和pdo|
+|--enable-mysqlnd|php原生驱动|
+|--with-mysqli=mysqlnd|安装mysqli|
+|--with-pdo-mysql=mysqlnd|安装php的pdo|
+|--with-config-file-path=$prefix/etc/php.ini|指定ini文件的路径|
+|--with-config-file-scan-dir=$prefix/etc/conf.d|指定ini文件的其它搜寻路径|
+|--with-curl=$curl_path|如果不在include目录下,需要手动指定依赖库目录|
+
+#### PHP的各种扩展安装依赖的库
+|依赖库|配置选项|备注|
+|:-------:|:-------:|:-------:|
+|[libcurl](https://curl.haxx.se/download/curl-7.54.0.tar.bz2)| --with-curl=libcurl安装目录|需要先安装[libcurl](https://curl.haxx.se/download/curl-7.54.0.tar.bz2),配置命令:./configure --enable-shared --with-pic ---disable-gopher|
