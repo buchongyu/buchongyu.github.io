@@ -91,6 +91,8 @@
 |[yaml]|||
 |[protobuf]|||
 |[imagick]|||
+|[zeromq]|||
+|zookeeper|||
 
 注意:库文件安装完成后,最好配置:PATH,LD_LIBRARY_PATH,CFLAGS,LDFLAGS,C_INCLUDE_PATH,LIBRARY_PATH
 
