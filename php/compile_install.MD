@@ -100,16 +100,16 @@
 先升级[bison, re2c] (http://www.hdj.me/php7-install-note), libXpm 
 
 #### 注意:
-&emsp;&emsp;库文件安装完成后,最好配置:PATH,LD_LIBRARY_PATH,CFLAGS,LDFLAGS,C_INCLUDE_PATH,LIBRARY_PATH
+&emsp;&emsp;1、库文件安装完成后,最好配置:PATH,LD_LIBRARY_PATH,CFLAGS,LDFLAGS,C_INCLUDE_PATH,LIBRARY_PATH
 
-&emsp;&emsp;mcrypt扩展安装需要LDFLAGS中有CFLAGS的一些标志.
+&emsp;&emsp;2、mcrypt扩展安装需要LDFLAGS中有CFLAGS的一些标志.
 
 #### 独立于库文件PHP的扩展
 |扩展|下载路径|备注|
 |:-------:|:-------:|:-------:|
 |redis|https://github.com/nicolasff/phpredis/archive/master.zip|./configure --with-php-config|
 |memcache|https://github.com/websupport-sk/pecl-memcache/archive/php7.zip|./configure --with-php-config|
-|zookeeper|wget http://pecl.php.net/get/zookeeper-0.4.0.tgz|./configure --with-libzookeeper-dir|
+|[zookeeper](http://blog.csdn.net/likunlun1234/article/details/46637919)|wget http://pecl.php.net/get/zookeeper-0.4.0.tgz|./configure --with-libzookeeper-dir|
 |yaml|http://pecl.php.net/get/yaml-2.0.0RC1.tgz|./configure --with-php-config|
 |event|http://pecl.php.net/get/event-2.3.0.tgz|./configure --with-php-config --with-libevent|
 |swoole|https://github.com/swoole/swoole-src/archive/swoole-1.7.21-stable.tar.gz|./configure --with-php-config|
