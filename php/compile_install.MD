@@ -82,8 +82,8 @@
 |[libxml2](http://xmlsoft.org/downloads.html)|配置命令:./configure --enable-shared --with-pic --with-python=no|[官网](ftp://xmlsoft.org/libxml2/libxml2-2.9.2.tar.gz)|
 |[ncurses](ftp://ftp.gnu.org/gnu/ncurses/ncurses-5.9.tar.gz)|配置命令:/configure --without-cxx|[官网](https://www.gnu.org/software/ncurses/)|
 |[readline](http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html)|配置命令:./configure --enable-shared --with-pic|官网(ftp://ftp.gnu.org/gnu/readline/readline-6.2.tar.gz)|依赖ncurses|
-|[jpeg](http://www.ijg.org/files/jpegsrc.v9a.tar.gz)|配置命令:./configure --prefix=/root/tools/thirtypary/ncurses --without-cxx||
-|[png](https://jaist.dl.sourceforge.net/project/libpng/libpng16/1.6.29/libpng-1.6.29.tar.gz)|配置命令:./configure --enable-shared --with-pic --with-zlib-prefix||
+|[jpeg](http://www.ijg.org/files/jpegsrc.v9a.tar.gz)|配置命令:./configure --prefix=/root/tools/thirtypary/jpeg||
+|[png](https://jaist.dl.sourceforge.net/project/libpng/libpng16/1.6.29/libpng-1.6.29.tar.gz)|配置命令:./configure --enable-shared --with-pic --with-zlib-prefix|依赖zlib|
 |[freetype](http://ftp.twaren.net/Unix/NonGNU/freetype/freetype-2.8.tar.bz2)|配置命令:./configure --prefix=/root/tools/thirtypary/freetype --without-harfbuzz|依赖:zlib, bzip2, libpng, harfbuzz|[官网](http://ftp.twaren.net/Unix/NonGNU/freetype/)|
 |[webp](http://downloads.webmproject.org/releases/webp/libwebp-0.6.0.tar.gz)|配置命令:./configure --enable-shared --with-pic|[官网](http://www.linuxfromscratch.org/blfs/view/svn/general/libwebp.html)|
 |[gd](https://github.com/libgd/libgd/releases/download/gd-2.1.1/libgd-2.1.1.tar.bz2)|配置命令:./configure --enable-shared --with-freetype --with-jpeg --with-png --with-zlib--with-jpeg --with-pic|依赖:freetype,jpeg,libpng|
@@ -117,7 +117,7 @@
 |yac|https://github.com/laruence/yac.git|./configure --with-php-config|
 |yaf|https://github.com/laruence/yaf.git|./configure --with-php-config|
 |yar|https://github.com/laruence/yar.git|./configure --with-php-config|
-|apc|||
+|apc||不支持|
 |mysqlnd_ms||不支持|
 
 #### kalfa-php扩展的实现
