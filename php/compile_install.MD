@@ -83,18 +83,66 @@
 |[openssl](http://www.openssl.org/source/openssl-1.0.2h.tar.gz)|配置命令:./config --prefix=$openssl/ssl zlib shared|依赖zlib|
 |[libcurl](https://curl.haxx.se/download/curl-7.54.0.tar.bz2)|配置命令:./configure --enable-shared --with-pic --disable-gopher|依赖[openssl](http://www.openssl.org/source/openssl-1.0.2h.tar.gz)|
 |[libxml2](http://xmlsoft.org/downloads.html)|配置命令:./configure --enable-shared --with-pic --with-python=no|[官网](ftp://xmlsoft.org/libxml2/libxml2-2.9.2.tar.gz)|
-|[readline](http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html)|配置命令:./configure --enable-shared --with-pic|官网(ftp://ftp.gnu.org/gnu/readline/readline-7.0.tar.gz)|
-|[gd]|||
+|[readline](http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html)|配置命令:./configure --enable-shared --with-pic|官网(ftp://ftp.gnu.org/gnu/readline/readline-6.2.tar.gz)|
 |[jpeg]|||
 |[png]|||
+|[gd]||依赖freetype,jpeg,libpng|
 |[redis](http://download.redis.io/releases/redis-3.2.5.tar.gz)|配置命令:make PREFIX=/usr/local/redis install|[官网](https://redis.io)|
 |[yaml]|||
 |[protobuf]|||
 |[imagick]|||
 |[zeromq]|||
-|zookeeper|||
+|[zookeeper]|||
+|[mongodb]|||
+|[bzip2]http://www.bzip.org/downloads.html
+http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz
+修改Makefile PREFIX=/root/tools/thirtypary/bzip2
+make -f Makefile-libbz2_so
+make
 
+make && make install PREFIX=/root/tools/thirtypary/bzip2
+最好少用yum安装
+
+先升级bison 和re2c
 注意:库文件安装完成后,最好配置:PATH,LD_LIBRARY_PATH,CFLAGS,LDFLAGS,C_INCLUDE_PATH,LIBRARY_PATH
+
+安装readline，需要保证ncurses先安装到指定的目录.
+ncurses
+ftp://ftp.gnu.org/gnu/ncurses/ncurses-5.9.tar.gz
+https://www.gnu.org/software/ncurses/
+./configure --without-cxx
+
+libpng
+依赖zlib
+https://jaist.dl.sourceforge.net/project/libpng/libpng16/1.6.29/libpng-1.6.29.tar.gz
+
+freetype依赖
+zlib, bzip2, libpng, harfbuzz
+./configure --prefix=/root/tools/thirtypary/freetype --without-harfbuzz
+wget http://ftp.twaren.net/Unix/NonGNU/freetype/freetype-2.8.tar.bz2
+
+
+http://www.linuxfromscratch.org/blfs/view/svn/general/libwebp.html
+http://downloads.webmproject.org/releases/webp/libwebp-0.6.0.tar.gz
+
+可能还需要下载:libxpm包
+libxpm
+https://fossies.org/linux/misc/old/libXpm-4.7.tar.gz/
+
+gd
+https://github.com/libgd/libgd/releases/download/gd-2.1.1/libgd-2.1.1.tar.bz2
+ ./configure --prefix=/root/tools/thirtypary/libgd --enable-shared --with-freetype=/root/tools/thirtypary/freetype/ --with-jpeg=/root/tools/thirtypary/jpeg --with-png=/root/tools/thirtypary/libpng/ --with-zlib=/root/tools/thirtypary/zlib/ --with-jpeg=/root/tools/thirtypary/jpeg/ --with-pic --enable-shared
+
+mcrypt扩展安装需要LDFLAGS中有CFLAGS的一些标志.
+http://ftp.twaren.net/Unix/NonGNU/freetype/
+
+wget http://www.ijg.org/files/jpegsrc.v9a.tar.gz
+
+redis
+wget https://github.com/nicolasff/phpredis/archive/master.zip
+cd src && 修改Makefile && make && make install 
+http://download.redis.io/releases/redis-2.8.7.tar.gz
+cd phpredis-master && phpize && ./configure --prefix=/root/tools/thirtypary/php7/lib/php/extensions/no-debug-non-zts-20160303/ --with-php-config=/root/tools/thirtypary/php7/bin/php-config
 
 #### 独立于库文件PHP的扩展
 |扩展|下载路径|备注|
