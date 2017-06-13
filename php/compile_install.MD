@@ -101,6 +101,7 @@
 
 #### 注意:
 &emsp;&emsp;库文件安装完成后,最好配置:PATH,LD_LIBRARY_PATH,CFLAGS,LDFLAGS,C_INCLUDE_PATH,LIBRARY_PATH
+
 &emsp;&emsp;mcrypt扩展安装需要LDFLAGS中有CFLAGS的一些标志.
 
 #### 独立于库文件PHP的扩展
