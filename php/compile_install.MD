@@ -90,17 +90,18 @@
 |[redis](http://download.redis.io/releases/redis-3.2.5.tar.gz)|配置命令:cd src,修改:Makefile make PREFIX=/usr/local/redis install|[官网](https://redis.io)|
 |[yaml](http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz)|配置命令:./configure --prefix=/root/tools/thirtypary/yaml --enable-shared --pic||
 |[zookeeper](http://mirror.bit.edu.cn/apache//zookeeper/zookeeper-3.4.9/zookeeper-3.4.9.tar.gz)|./configure –prefix=/root/tools/thirtypary/zookeeper||
-|[mongodb]|||
 |[bzip2](http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz)|修改Makefile PREFIX=/root/tools/thirtypary/bzip2, make -f Makefile-libbz2_so|[官网](http://www.bzip.org/downloads.html)|
 |[libevent2](http://cloud.github.com/downloads/libevent/libevent/libevent-2.0.20-stable.tar.gz)|配置命令:./configure --prefix=/root/tools/thirtypary/libevent2|[官网](http://libevent.org/)|
 |[imagick]|||
 |[protobuf]|||
 |[zeromq]|||
+|[mongodb]|||
 
-先升级bison, re2c (http://www.hdj.me/php7-install-note), libXpm 
-注意:库文件安装完成后,最好配置:PATH,LD_LIBRARY_PATH,CFLAGS,LDFLAGS,C_INCLUDE_PATH,LIBRARY_PATH
+先升级[bison, re2c] (http://www.hdj.me/php7-install-note), libXpm 
 
-mcrypt扩展安装需要LDFLAGS中有CFLAGS的一些标志.
+#### 注意:
+&emsp;&emsp;库文件安装完成后,最好配置:PATH,LD_LIBRARY_PATH,CFLAGS,LDFLAGS,C_INCLUDE_PATH,LIBRARY_PATH
+&emsp;&emsp;mcrypt扩展安装需要LDFLAGS中有CFLAGS的一些标志.
 
 #### 独立于库文件PHP的扩展
 |扩展|下载路径|备注|
@@ -117,6 +118,5 @@ mcrypt扩展安装需要LDFLAGS中有CFLAGS的一些标志.
 |yar|https://github.com/laruence/yar.git|./configure --with-php-config|
 |apc|||
 |mysqlnd_ms||不支持|
-
 
 #### kalfa-php扩展的实现
