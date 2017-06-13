@@ -125,4 +125,5 @@
 #### 安装详细命令:(前提:yum install libxpm-devel, bison, re2c)
 > ./configure --prefix=/root/tools/thirtypary/php7 --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd  -with-config-file-path=/root/tools/thirtypary/php7/etc  --enable-fpm --with-libxml-dir=/root/tools/thirtypary/libxml2 --with-openssl-dir=/root/tools/thirtypary/openssl/  --with-mcrypt=/root/tools/thirtypary/libmcrypt/ --with-curl=/root/tools/thirtypary/libcurl/ --enable-sockets --enable-soap --enable-bcmath --enable-shmop --enable-calendar --with-zlib-dir=/root/tools/thirtypary/zlib --enable-pcntl --enable-ftp --with-xmlrpc --enable-mbstring --enable-zip -enable-sysvsem --enable-sysvshm --enable-sysvmsg  --enable-zip --with-bz2=/root/tools/thirtypary/bzip2 --with-gettext --with-mhash   --with-kerberos  --with-readline=/root/tools/thirtypary/readline/ --without-cxx --with-gd=/root/tools/thirtypary/libgd --with-freetype-dir=/root/tools/thirtypary/freetype/ --with-png-dir=/root/tools/thirtypary/libpng/ --with-jpeg-dir=/root/tools/thirtypary/jpeg --with-xpm-dir=/usr/lib64 --with-openssl=/root/tools/thirtypary/openssl/
 
-&emsp;&emsp; 后面安装的时候注意,第三方库都安装到一个文件夹中.
+&emsp;&emsp; 1、后面安装的时候注意,第三方库都安装到一个文件夹中.
+&emsp;&emsp; 2、对于这些依赖环境需要有个项目专门处理安装软件.
