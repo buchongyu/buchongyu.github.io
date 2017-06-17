@@ -12,6 +12,8 @@
 
 &emsp;&emsp;6、 [https协议和http协议](https://github.com/buchongyu/buchongyu.github.io/blob/master/php/http_https.MD)
 
-&emsp;&emsp;7、 [php psr标准](http://www.kkh86.com/it/code-standard/guide-psr-desc.html)
+&emsp;&emsp;7、 [php编码规范](https://github.com/buchongyu/buchongyu.github.io/blob/master/php/codestyles/README.MD)
 
-&emsp;&emsp;7、 [php编码规范](http://www.kkh86.com/it/code-standard/guide-psr-desc.html)
+#### 参考:
+
+&emsp;&emsp;1、 [php psr标准](http://www.kkh86.com/it/code-standard/guide-psr-desc.html)
