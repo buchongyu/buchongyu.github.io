@@ -6,6 +6,20 @@
  
 -------
 
+#### blog主要目录
+
+　1、[php](https://github.com/buchongyu/buchongyu.github.io/blob/master/php/README.MD)
+ 
+　2、[php-ext](https://github.com/buchongyu/buchongyu.github.io/blob/master/php-ext/README.MD)
+  
+　3、[c or c plus plus](https://github.com/buchongyu/buchongyu.github.io/blob/master/c-cpp/README.MD)
+
+　4、[hive-hadoop](https://github.com/buchongyu/buchongyu.github.io/blob/master/hive-hadoop/README.MD)
+
+　5、[nginx](https://github.com/buchongyu/buchongyu.github.io/blob/master/nginx/README.MD)
+
+-------
+
 #### 本年度计划阅读的书籍：
   
 　1、[乌合之众](https://book.douban.com/subject/1012611/)
@@ -62,16 +76,3 @@
 
   9、[google开源项目风格指南](https://github.com/zh-google-styleguide/zh-google-styleguide)
 
--------
-
-#### blog主要目录
-
-　1、[php](https://github.com/buchongyu/buchongyu.github.io/blob/master/php/README.MD)
- 
-　2、[php-ext](https://github.com/buchongyu/buchongyu.github.io/blob/master/php-ext/README.MD)
-  
-　3、[c or c plus plus](https://github.com/buchongyu/buchongyu.github.io/blob/master/c-cpp/README.MD)
-
-　4、[hive-hadoop](https://github.com/buchongyu/buchongyu.github.io/blob/master/hive-hadoop/README.MD)
-
-　5、[nginx](https://github.com/buchongyu/buchongyu.github.io/blob/master/nginx/README.MD)
