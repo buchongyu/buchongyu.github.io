@@ -14,6 +14,3 @@
 
 &emsp;&emsp;7、 [php编码规范](https://github.com/buchongyu/buchongyu.github.io/blob/master/php/codestyles/README.MD)
 
-#### 参考:
-
-&emsp;&emsp;1、 [php psr标准](http://www.kkh86.com/it/code-standard/guide-psr-desc.html)
