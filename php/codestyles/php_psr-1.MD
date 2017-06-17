@@ -30,7 +30,49 @@
 
 (3) 副作用: 一个源文件建议只用来做申明(类(class),函数(function),常量(constant)等)或者只用来做一些引起副作用的操作(例如:输出信息，修改.ini配置等)，但不建议同时做这两件事情。短语副作用的意思是:在包含文件时所执行的逻辑与所申明的类(class),函数(function),常量(constant)等没有直接的关系.
 
-&emsp;&emsp;副作用包含但是不局限于:产生输出，显示地require和include,链接外部服务,修改ini配置,触发错误或者异常，修改全局或者静态变量，读取或者修改文件等等.
+&emsp;副作用包含但是不局限于:产生输出，显示地require和include,链接外部服务,修改ini配置,触发错误或者异常，修改全局或者静态变量，读取或者修改文件等等.
+
+避免使用的例子:
+&emsp;&emsp;```php
+<?php
+
+// 副作用:修改了ini配置
+ini_se('error_reporting', E_ALL);
+
+//副作用:载入了文件
+include 'file.php';
+
+// 副作用:产生了输出
+echo "<html>"
+
+// 申明
+function foo()
+{
+    // 申明函数体
+}
+
+```
+
+
+应该使用的例子:
+
+&emsp;&emsp;```php
+<?php
+
+// 申明
+function foo()
+{
+    // 函数体
+}
+
+// 条件式申明不算副作用
+if (!function_exists('bar')) {
+    function bar()
+    {
+        // 函数体
+    }
+}
+```
 
 -------
 
