@@ -49,17 +49,17 @@
 
 &emsp;&emsp;&emsp;&emsp; (3) 副作用: 一个源文件建议只用来做申明(类(class),函数(function),常量(constant)等)或者只用来做一些引起副作用的操作(例如:输出信息，修改.ini配置等)，但不建议同时做这两件事情。短语副作用的意思是:在包含文件时所执行的逻辑与所申明的类(class),函数(function),常量(constant)等没有直接的关系.
 
-&emsp;&emsp;&emsp;&emsp;&emsp&emsp;副作用包含但是不局限于:产生输出，显示地require和include,链接外部服务,修改ini配置,触发错误或者异常，修改全局或者静态变量，读取或者修改文件等等.
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;副作用包含但是不局限于:产生输出，显示地require和include,链接外部服务,修改ini配置,触发错误或者异常，修改全局或者静态变量，读取或者修改文件等等.
 
 &emsp;&emsp;3、命名空间(namespace)和类名(classname)
 
-&emsp;&emsp;&emsp;&emsp;命名空间(namespace)和类(class)必须遵守PSR-0.
+&emsp;&emsp;&emsp;&emsp;(1) 命名空间(namespace)和类(class)必须遵守PSR-0.
 
-&emsp;&emsp;&emsp;&emsp;一个源文件中只能有一个类(class),并且每个类(class)至少有一级空间名(namespace),即一个顶级的组织名(vendor name)
+&emsp;&emsp;&emsp;&emsp;(2) 一个源文件中只能有一个类(class),并且每个类(class)至少有一级空间名(namespace),即一个顶级的组织名(vendor name)
 
-&emsp;&emsp;&emsp;&emsp;类名(classname)必须使用大驼峰命名法
+&emsp;&emsp;&emsp;&emsp;(3) 类名(classname)必须使用大驼峰命名法
 
-&emsp;&emsp;&emsp;&emsp;PHP5.3之后的代码必须使用正式的命名空间(namespace),PHP5.2之前的代码建议使用伪命名空间 Vendor_作为类名的前缀(classname)
+&emsp;&emsp;&emsp;&emsp;(4) PHP5.3之后的代码必须使用正式的命名空间(namespace),PHP5.2之前的代码建议使用伪命名空间 Vendor_作为类名的前缀(classname)
 
 &emsp;&emsp;4、类的常量、属性和方法
 
