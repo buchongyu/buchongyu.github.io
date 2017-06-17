@@ -39,7 +39,7 @@
 // 副作用:修改了ini配置
 ini_se('error_reporting', E_ALL);
 
-//副作用:载入了文件
+// 副作用:载入了文件
 include 'file.php';
 
 // 副作用:产生了输出
