@@ -14,6 +14,19 @@ psr原本有四个规范，分别是:
 
 &emsp;&emsp; 5、[PSR-4](http://www.php-fig.org/psr/psr-4/) 自动加载增强版，PSR-4和PSR-0在功能上有所重复,最大的区别是:PSR-4类名中的下划线无任何意义,PSR-0中定义类名中的下划线会被转换成目录分割符号。
 
+#### PHP代码格式化工具:
+
+&emsp;&emsp; [PHP-CS-Fixer](https://github.com/stephpy/vim-php-cs-fixer)
+
+#### PHP代码规范检查工具
+
+&emsp;&emsp; [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer/)
+
+
+#### PHP Code Review工具
+
+&emsp;&emsp; [Phabricator](https://www.phacility.com/)
+
 
 #### 为什么要使用编码规范:
 
@@ -29,4 +42,4 @@ psr原本有四个规范，分别是:
 
 &emsp;&emsp;2、[php psr标准](http://www.kkh86.com/it/code-standard/guide-psr-desc.html)
 
-
+&emsp;&emsp;3、[google代码规范](https://github.com/zh-google-styleguide/zh-google-styleguide)
