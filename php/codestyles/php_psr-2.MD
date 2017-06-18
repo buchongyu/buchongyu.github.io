@@ -97,6 +97,18 @@ class Foo extends Bar implements FooInterface
 
 * PHP的常量true，false和null`必须`使用小写字母
 
+* 下面是php的关键字
+
+```
+__halt_compiler, abstract, and, array, as, break, callable, case, catch, clone,
+const, continue, declare, default, die, do, echo, else, elseif, empty, enddeclare,
+endfor, endforeach, endif, endswitch, endwhile, eval, exit, extends, final, for,
+foreach, function, global, goto, if, implements, include, include_once, instanceof,
+instendof, interface, isset, list, namespace, new, or, print, private, protected,
+public, require, requie_once, return, static, switch, throw, trait, try, unset, use
+var, while, xor
+```
+
 #### 3. 命名空间(namespace)和导入(use)申明
 
 * 命名空间(namespac)的申明后面`必须`有一行空行
