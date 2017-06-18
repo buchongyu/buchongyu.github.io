@@ -87,6 +87,107 @@ class Foo extends Bar implements FooInterface
 
 #### 2.4 缩进
 
-* 代码
+* 代码必须使用4个空格，且`不可`使用制表符来缩进
 
-*  
+* 注意:代码中只使用空格，且不和制表符混合使用，将会对避免代码差异，不定、历史和注解中的一些问题有帮助.空格的使用还可以使通过调整细微的缩进来改进行间对齐变的更加简单。
+
+#### 2.5 关键字和True/False/Null
+
+* PHP的关键字(keyword)`必须`使用小写字母
+
+* PHP的常量true，false和null`必须`使用小写字母
+
+#### 3. 命名空间(namespace)和导入(use)申明
+
+* 命名空间(namespac)的申明后面`必须`有一行空行
+
+* 所有的导入(use)申明`必须`放在命名空间(namespace)申明的下面
+
+* 一句申明中，`必须`只有一个导入(use)关键字
+
+* 在导入(use)申明代码块后面`必须`有一会空行
+
+示例:
+
+```
+<?php
+namespace Vendor\Package;
+
+use FooClass;
+use BarClass as Bar;
+use OtherVendor\OtherPackage\BazClass;
+
+// .... 其它的PHP代码...
+
+```
+
+#### 4. 类(class)，属性(property)和方法(method)
+
+&emsp;&emsp;术语`类`指的是所有的类(class),接口(interface)和特型(trait)
+
+#### 4.1 扩展(extends)和实现(implement)
+
+1. 一个类的扩展(extends)和实现(implement)关键词必须和类名(classname)在同一行
+
+2. 类(class)的左花括号`必须`放在下面自成一行;右花括号必须放在类(class)主体后面自成一行
+
+```
+<?php
+namespace Vendor\Package;
+
+use FooClass;
+use BarClass as Bar;
+use OtherVendor\OtherPackage\BazClass;
+
+class ClassName extends ParentClass implements \ArrayAccess,\Countable
+{
+    //常量、属性、方法
+}
+```
+
+3. 实现(implement)列表`可以`被拆分为多个缩进了一次的子行。如果要拆成多个子行,列表的第一项`必须`要放在下一行,并且每行必须只有一个接口(interface)
+
+```
+<?php 
+
+namespace Vendor\Package;
+
+use FooClass;
+use BarClass as Bar;
+use OtherVendor\OtherPackage\BazClass;
+
+class ClassName extends ParentClass implements
+    \ArrayAccess,
+    \Countable,
+    \Serializable
+{
+    //常量、属性、方法
+}
+```
+
+#### 4.2 属性(property)
+
+- 所有的属性(property)都必须申明其可见性
+
+- 变量(var)关键字`不可`用来申明一个属性(property)
+
+- 一条语句`不可`申明多个属性(property)
+
+- 属性明(property name) `不推荐`用耽搁下划线作为前缀来申明其保护(protected)或者私有(private)的可见性
+
+- 一个属性(property)申明看起来应该像下面一样:
+
+```
+<?php 
+namespace Vendor\Package;
+
+class ClassName
+{
+    public $foo = null;
+}
+```
+
+#### 4.3 方法(method)
+
+- 所有的方法(method)都`必须`申明其可见性
+
