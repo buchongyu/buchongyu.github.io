@@ -249,4 +249,164 @@ class ClassName
 
 #### 4.5 抽象(abstract)，终结(final)和静态(static)
 
+- 当用到抽象(abstract)和终结(final)来做类申明时，它们必须放在可见性申明的前面
 
+- 而当用到静态(static)来做类申明时，则必须放在可见性申明的后面
+
+```
+<?php
+namespace Vendor/Package;
+
+abstract class ClassName
+{
+    protected static $foo;
+
+    abstract protected function zim();
+
+    final public static function bar()
+    {
+        // 方法主体的部分
+    }
+}
+```
+
+#### 4.6调用方法和函数
+
+- 调用一个方法或者函数时，在方法名或者函数名和左括号之间不可有空格，左括号之后不可以有空格,又括号之前也不可有空格。参数列表中逗号之前不可以有空格，逗号之后则必须有一个空格。
+
+```
+<?php
+bar();
+$foo->var($arg1);
+Foo::bar($arg1, $arg2);
+```
+
+- 参数列表可以被拆分成多个缩进了一次的子行。如果拆分成子行，参数列表中的第一项必须放在下一行，并且没一行必须只有一个参数。
+
+```
+<?php
+$foo->bar(
+    $longArgument,
+    $intArgument,
+    $arrArgument
+);
+```
+
+#### 5. 控制结构
+
+&emsp;&emsp;下面是对与空值结果代码风格的概括:
+
+&emsp;&emsp; 1.控制结构的关键词之后必须有一个空格
+
+&emsp;&emsp; 2.控制结构的左括号之后不可有空格
+
+&emsp;&emsp; 3.控制结构的右括号之前之前不可以有空格
+
+&emsp;&emsp; 4.控制结构的右括号和左花括号之间必须有一个空格
+
+&emsp;&emsp; 5.控制结构的代码的主体必须进行一次缩进
+
+&emsp;&emsp; 6.控制结构的右花括号必须放在主题的下一步
+
+&emsp;&emsp; 每个控制结构的代码主题必须被括在花括号里面。这样可使代码看上去更加的标准化，并且加入新代码的时候哈可以因此而减少引入错误的可能
+
+#### 5.1 if,elseif,else
+
+&emsp;&emsp;下面是一个if条件控制结构的示例，注意：其中括号，空格和花括号的位置。同时注意:else和elseif 要和前一个条件控制结构的右花括号在同一行
+
+```
+<?php
+
+if ($expr1) {
+    // code segment
+} elseif ($expr2) {
+    // code segment
+} else {
+    // code segment
+}
+```
+
+&emsp;&emsp;推荐使用elseif来代替else if，以保持所有的条件控制关键字看起来像是一个单词.
+
+#### 5.2 switch,case
+
+下面是一个switch条件控制结构的示例:注意其中括号，空格和花括号的位置。case语句必须要缩进一级,而break关键字(或者其他终止关键字)必须和case结构的代码主体在同一个缩进层级。如果一个有主体代码的case结构故意的继续向下执行则要有一个类似于// no break的注释.
+
+```
+<?php
+awitch ($expr) {
+    case 0:
+        echo "case 0";
+        break;
+    case 1:
+        echo "case 1";
+        break;
+        // no break
+    case 2:
+    case 3:
+    case 4:
+        echo "case 4";
+        return;
+    default:
+        echo "Default case";
+        break;
+}
+```
+
+#### 5.3 while,do while
+
+- 下面是一个while循环控制结构的示例，注意其中括号，空格和花括号的位置.
+
+```
+<?php
+while ($expr) {
+    // stucture body
+}
+```
+
+2 下面是一个do while循环控制结构的示例，注意：其中括号，空格和花括号的位置。
+
+```
+<?php
+do {
+    // structure body
+} while ($expr);
+```
+
+#### 5.4 for
+
+ 下面是一个for循环控制结构的示例，注意其中括号，空格和花括号的位置。
+
+```
+<?php
+for ($i = 0;$i < 10;$i++) {
+    // for body
+}
+```
+
+#### 5.5foreach
+
+ 下面是一个foreach循环控制结构，注意其中括号，空格和花括号的位置。
+
+```
+<?php
+
+foreach ($arr as $key => $value) {
+    // foreach body
+}
+```
+
+#### 5.6 try,catch
+
+ 下面是一个try,catch 异常处理控制结构的示例，注意其中括号，空格和花括号的位置。
+
+```
+<?php
+try {
+    // try body
+} catch (FirstExceptionType $e) {
+    // catch body
+} catch (OtherExceptionType $e) {
+    // catch body
+}
+```
