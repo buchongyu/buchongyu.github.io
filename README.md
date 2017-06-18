@@ -74,5 +74,5 @@
  
 　8、[autoconf](https://www.gnu.org/software/autoconf/manual/autoconf.html)
 
-  9、[google开源项目风格指南](https://github.com/zh-google-styleguide/zh-google-styleguide)
+　9、[google开源项目风格指南](https://github.com/zh-google-styleguide/zh-google-styleguide)
 
