@@ -22,11 +22,13 @@ psr原本有四个规范，分别是:
 
 &emsp;&emsp; [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer/)
 
-
 #### PHP Code Review工具
 
-&emsp;&emsp; [Phabricator](https://www.phacility.com/)
+&emsp;&emsp; [Phabricator](https://www.phacility.com/) or [Gerrit](http://code.google.com/p/gerrit/downloads/list)
 
+#### 项目管理和代码托管平台
+
+&emsp;&emsp; [gitlab](https://about.gitlab.com/)
 
 #### 为什么要使用编码规范:
 
