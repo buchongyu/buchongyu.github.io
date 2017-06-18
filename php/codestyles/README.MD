@@ -14,7 +14,28 @@ psr原本有四个规范，分别是:
 
 &emsp;&emsp; 5、[PSR-4](https://github.com/buchongyu/buchongyu.github.io/blob/master/php/codestyles/php_psr-4.MD) | [PIG](http://www.php-fig.org/psr/psr-4/) 自动加载增强版，PSR-4和PSR-0在功能上有所重复,最大的区别是:PSR-4类名中的下划线无任何意义,PSR-0中定义类名中的下划线会被转换成目录分割符号。
 
-PHP中的代码[注释写法](https://github.com/phpDocumentor/fig-standards/blob/master/proposed/phpdoc.md)
+PHP中的代码[注释写法](https://github.com/phpDocumentor/fig-standards/blob/master/proposed/phpdoc.md) | [phpDocument](https://www.phpdoc.org/)
+
+```
+<?php
+/**
+ * class functional
+ *
+ * @package 说明:namespace
+ * @author 作者信息
+ */
+
+ /**
+  * A simole discription about clas
+  *
+  * 说明变量的作用
+  * @var 变量的类型
+  *
+  * @param 说明参数类型
+  * @access 说明访问权限
+  * @ 说明反馈信息
+  */
+```
 
 #### PHP代码格式化工具:
 
