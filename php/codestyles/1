@@ -56,28 +56,3 @@ class Foo extends Bar implements FooInterface
     }
 }
 ```
-
-#### 2.通则
-
-#### 2.1 基础代码规范
-
-&emsp;&emsp;代码必须遵守PSR-1中的所有规则
-
-#### 2.2 源文件
-
-&emsp;&emsp; + 所有的PHP源文件`必须`使用unix换行作为行结束符
-
-&emsp;&emsp; + 所有的源文件必须以一个空行结束
-
-&emsp;&emsp; + 纯PHP代码源文件的关闭标签?>必须省略
-
-#### 2.3 行
-
-&emsp;&emsp; + 
-&emsp;&emsp; + 
-&emsp;&emsp; + 
-&emsp;&emsp; + 
-&emsp;&emsp; + 
-&emsp;&emsp; + 
-&emsp;&emsp; + 
-&emsp;&emsp; + 
