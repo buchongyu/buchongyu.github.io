@@ -30,6 +30,16 @@ psr原本有四个规范，分别是:
 
 &emsp;&emsp; [gitlab](https://about.gitlab.com/)
 
+#### 版本控制系统
+
+&emsp;&emsp; 1、[git](https://git-scm.com/)
+
+&emsp;&emsp; 2、[svn](https://tortoisesvn.net/)
+
+#### 项目管理软件
+
+&emsp;&emsp; [禅道](http://www.zentao.net/)
+
 #### 为什么要使用编码规范:
 
 &emsp;&emsp;1、[MeteorSeed](http://www.cnblogs.com/MeteorSeed/archive/2012/03/21/2404656.html)
