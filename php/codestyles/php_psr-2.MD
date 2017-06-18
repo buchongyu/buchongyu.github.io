@@ -191,3 +191,62 @@ class ClassName
 
 - 所有的方法(method)都`必须`申明其可见性
 
+- 方法名(method name)不推荐用单个下换下作为前缀来表明其保护(protected)或者私有的可见性
+
+- 方法名(method name)在其申明后面不可有空格跟随，其左花括号必须放在下面自称一行，且右花括号必须放在方法主体的下面自称一行。左括号后面不可以有空格，且右花括号前面也不可以有空格
+
+- 一个方法(method)申明看起来应该像下面一样，注意括号，逗号，空格和花括号的位置:
+
+```
+<?php
+namespace Vendor\Package;
+
+class ClassName
+{
+    public function fooBarBaz($arg1, $arg2, $args3 = [])
+    {
+        // 方法主题部分
+    }
+}
+```
+
+#### 4.4 方法(method)的参数
+
+- 在参数的列表中，逗号之前不可以有空格，而逗号之后则必须要一个空格
+
+- 方法(method)中有默认值的参数必须放在参数列表的最后面
+
+```
+<?php
+namespace Vendor\Package;
+
+class ClassName
+{
+    public function foo($arg1, $arg2, $arg3 = [])
+    {
+        // 方法主题部分
+    }
+}
+```
+
+- 参数列表可以被拆分为多个缩进了一次的子行。如果要拆分成多个子行，参数列表的第一项必须放在下一行，并且每行必须只有一个参数.当参数列表被拆分成多个子行，右括号和花括号之间必须有一个空格并且自成一行。
+
+```
+<?php
+namespace Vendor/Package;
+
+class ClassName
+{
+    public function foo(
+        $arg1,
+        $arg2,
+        array $arg3 = []
+    ) {
+
+    }
+}
+```
+
+#### 4.5 抽象(abstract)，终结(final)和静态(static)
+
+
