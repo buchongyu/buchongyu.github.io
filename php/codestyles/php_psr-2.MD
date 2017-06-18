@@ -364,7 +364,7 @@ while ($expr) {
 }
 ```
 
-2 下面是一个do while循环控制结构的示例，注意：其中括号，空格和花括号的位置。
+- 下面是一个do while循环控制结构的示例，注意：其中括号，空格和花括号的位置。
 
 ```
 <?php
@@ -384,7 +384,7 @@ for ($i = 0;$i < 10;$i++) {
 }
 ```
 
-#### 5.5foreach
+#### 5.5 foreach
 
  下面是一个foreach循环控制结构，注意其中括号，空格和花括号的位置。
 
@@ -410,3 +410,121 @@ try {
     // catch body
 }
 ```
+
+#### 6. 闭包
+
+- 申明闭包时所用的function关键字之后必须要有一个空格,而use关键字的前后都要有一个空格
+
+- 闭包的左花括号必须跟其在同一行，而右花括号必须在闭包主体的下一行
+
+- 闭包的参数列表和变量列表的左括号后面不可以有空格，右花括号的前面也不可以有空格
+
+- 闭包的参数列表和变量列表中逗号前面不可以有空格，而逗号后面则必须有空格
+
+- 闭包的参数列表中带默认值的参数必须放在参数列表的结尾部分
+
+下面是一个闭包的示例。注意：括号，空格和花括号的位置:
+
+```
+<?php
+
+$cloaureWithArgs = function ($arg1, $arg2) {
+    // body
+}
+
+$clasureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2) {
+    // body
+}
+```
+
+参数列表和变量列表可以被拆分成多个缩进了一级的子行。如果要拆分成多个子行，列表中的第一项必须放在下一行,并且没一行必须只放一个参数或者变量。
+
+当列表(不管是参数还是变量)最终被拆分成多个子行，右括号与左括号之间必须要有一个空格并且自成一行。
+
+下面是一个参数列表和变量列表被拆分成多个子行的示例:
+
+```
+<?php
+
+$longArgNOVars = function(
+    $longArgument,
+    $intArgument,
+    $floatArgument,
+    $arrayArgument
+) {
+    // body
+};
+
+$boArgsLongVars = function() use (
+    $longArgument,
+    $intArgument,
+    $floatArgument,
+    $arrayArgument
+) {
+    // body
+}
+
+$longArgNOVars = function(
+    $longArgument,
+    $intArgument,
+    $floatArgument,
+    $arrayArgument
+) use (
+    $longVar,
+    $intVar,
+    $floatArgument,
+    $arrayArgument
+) {
+    // body
+};
+
+$longArgNOVars = function(
+    $longArgument,
+    $intArgument,
+    $floatArgument,
+    $arrayArgument
+) use ($arrayArgument) {
+    // body
+};
+
+$longArgNOVars = function($arrayArgument) use (
+    $longVar,
+    $intVar,
+    $floatArgument,
+    $arrayArgument
+) {
+    // body
+}
+```
+
+当闭包作为一个参数在函数或者方法中调用时，依然要遵守上述的规则。
+
+```
+<?php
+
+$foo->bar(
+    $arg1,
+    function ($arg2) use (val2) {
+        // body
+    },
+    $arg3
+);
+```
+
+#### 7.0 结论
+
+本指南有意的省略了许多元素的代码风格，主要包括:
+
+- 全局变量与全局常量的申明
+
+- 函数申明
+
+- 操作符与赋值
+
+- 行间对齐
+
+- 注释与文档快
+
+- 类名的前缀和后缀
+
+- 最佳实践
