@@ -1,1 +1,4 @@
-#### [zend sapi的实现](http://www.laruence.com/2008/08/12/180.html)
+### PHP扩展和源码
+
+#### 不包括php的其它解释器,如:HHVM、Hippy、Quercus或JPHP
+
